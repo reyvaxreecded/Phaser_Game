@@ -19,18 +19,19 @@ export default class RocketMouse extends Phaser.GameObjects.Container {
         super(scene, x, y)
 
         this.mouse = scene.add.sprite(0, 0, TextureKeys.RocketMouse)
-            .setOrigin(0.5, 1)
-            .play(AnimationKeys.RocketMouseRun)
+            .setOrigin(0.5, 1)             
 
-        this.flames = scene.add.sprite(-63, -15, TextureKeys.RocketMouse)
-            .play(AnimationKeys.RocketFlamesOn)
+        this.flames = scene.add.sprite(-63, -15, TextureKeys.RocketMouse) 
 
-        this.enableJetpack(false)
+        this.createAnimation()
 
-        this.add(this.flames)
-        this.add(this.mouse)
+        this.mouse.play(AnimationKeys.RocketMouseRun)
+        this.flames.play(AnimationKeys.RocketFlamesOn)
 
         scene.physics.add.existing(this)
+
+        this.add(this.mouse)
+        this.add(this.flames)
 
         const body = this.body as Phaser.Physics.Arcade.Body
         body.setSize(this.mouse.width * 0.5, this.mouse.height * 0.7)
@@ -75,14 +76,13 @@ export default class RocketMouse extends Phaser.GameObjects.Container {
                 {
                     body.velocity.x *= 0.99
 
-                    if(body.velocity.x <= 5)
-                    {
+                    if (body.velocity.x <= 5) {
                         this.MouseState = MouseState.Dead
                     }
 
                     break
                 }
-            
+
 
             case MouseState.Dead:
                 {
@@ -92,6 +92,54 @@ export default class RocketMouse extends Phaser.GameObjects.Container {
                     break
                 }
         }
+    }
+    private createAnimation() {
+        this.mouse.anims.create({
+            key: AnimationKeys.RocketMouseRun,
+            frames: this.mouse.anims.generateFrameNames(TextureKeys.RocketMouse, {
+                start: 1, end: 4, prefix: 'rocketmouse_run', zeroPad: 2, suffix: '.png'}),
+                frameRate: 10,
+                repeat: -1
+        })
+
+        this.mouse.anims.create({
+            key: AnimationKeys.RocketMouseFall,
+            frames: [{
+                key: TextureKeys.RocketMouse,
+                frame: 'rocketmouse_fall01.png'
+            }]
+        })
+
+        this.mouse.anims.create({
+            key: AnimationKeys.RocketMouseJump,
+            frames: [{
+                key: TextureKeys.RocketMouse,
+                frame: 'rocketmous_fly_01.png'
+            }]
+        })
+
+        this.mouse.anims.create({
+            key: AnimationKeys.RocketMouseDead,
+            frames: this.mouse.anims.generateFrameNames(TextureKeys.RocketMouse,
+                {
+                    start: 1,
+                    end: 2,
+                    prefix: 'rocketmouse_dead',
+                    zeroPad: 2,
+                    suffix: '.png'
+                }),
+            frameRate: 10
+        })
+
+        this.flames.anims.create({
+            key: AnimationKeys.RocketFlamesOn,
+            frames: this.flames.anims.generateFrameNames(TextureKeys.RocketMouse,
+                { start: 1, end: 2, prefix: 'flame', suffix: '.png' }),
+            frameRate: 10,
+            repeat: -1
+        })
+
+
     }
     enableJetpack(enabled: boolean) {
         this.flames.setVisible(enabled)
