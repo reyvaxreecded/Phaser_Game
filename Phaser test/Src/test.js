@@ -1,4 +1,3 @@
-// import * as Phaser from '../node_modules/phaser/dist/phaser.js';
 export class Game{
     constructor(){
         let bulletTime = 0;
@@ -146,7 +145,7 @@ export class Game{
     fireBullet()
     {
         if(this.time.now > this.bulletTime){
-            bullet = this.bullets.getFirstExists(false);
+            this.bullet = this.bullets.getFirstExists(false);
 
             if(this.bullet){
                 this.bullet.reset(this.player.x,this.player.y);
