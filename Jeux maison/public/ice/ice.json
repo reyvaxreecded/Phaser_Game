@@ -12,6 +12,21 @@
                 "key": "bg-icebergs-2"
             },
             {
+                "url": "public/ice/block_ground_05_mid.png",
+                "type": "image",
+                "key": "block_ground_05_mid"
+            },
+            {
+                "url": "public/ice/block_ice_01a.png",
+                "type": "image",
+                "key": "block_ice_01a"
+            },
+            {
+                "url": "public/ice/block_ice_01b.png",
+                "type": "image",
+                "key": "block_ice_01b"
+            },
+            {
                 "url": "public/ice/block_slide_down_1.png",
                 "type": "image",
                 "key": "block_slide_down_1"
