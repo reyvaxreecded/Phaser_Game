@@ -1,0 +1,167 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "public/ice/bg-icebergs-1.png",
+                "type": "image",
+                "key": "bg-icebergs-1"
+            },
+            {
+                "url": "public/ice/bg-icebergs-2.png",
+                "type": "image",
+                "key": "bg-icebergs-2"
+            },
+            {
+                "url": "public/ice/block_slide_down_1.png",
+                "type": "image",
+                "key": "block_slide_down_1"
+            },
+            {
+                "url": "public/ice/block_slide_down_2.png",
+                "type": "image",
+                "key": "block_slide_down_2"
+            },
+            {
+                "url": "public/ice/block_slide_down_3.png",
+                "type": "image",
+                "key": "block_slide_down_3"
+            },
+            {
+                "url": "public/ice/block_slide_down_4.png",
+                "type": "image",
+                "key": "block_slide_down_4"
+            },
+            {
+                "url": "public/ice/block_slide_up_1.png",
+                "type": "image",
+                "key": "block_slide_up_1"
+            },
+            {
+                "url": "public/ice/block_slide_up_2.png",
+                "type": "image",
+                "key": "block_slide_up_2"
+            },
+            {
+                "url": "public/ice/block_slide_up_3.png",
+                "type": "image",
+                "key": "block_slide_up_3"
+            },
+            {
+                "url": "public/ice/block_slide_up_4.png",
+                "type": "image",
+                "key": "block_slide_up_4"
+            },
+            {
+                "url": "public/ice/block_snow_1_left.png",
+                "type": "image",
+                "key": "block_snow_1_left"
+            },
+            {
+                "url": "public/ice/block_snow_1_mid_1.png",
+                "type": "image",
+                "key": "block_snow_1_mid_1"
+            },
+            {
+                "url": "public/ice/block_snow_1_mid_2.png",
+                "type": "image",
+                "key": "block_snow_1_mid_2"
+            },
+            {
+                "url": "public/ice/block_snow_1_mid_3.png",
+                "type": "image",
+                "key": "block_snow_1_mid_3"
+            },
+            {
+                "url": "public/ice/block_snow_1_right.png",
+                "type": "image",
+                "key": "block_snow_1_right"
+            },
+            {
+                "url": "public/ice/block_snow_2_left.png",
+                "type": "image",
+                "key": "block_snow_2_left"
+            },
+            {
+                "url": "public/ice/block_snow_2_mid_1.png",
+                "type": "image",
+                "key": "block_snow_2_mid_1"
+            },
+            {
+                "url": "public/ice/block_snow_2_mid_2.png",
+                "type": "image",
+                "key": "block_snow_2_mid_2"
+            },
+            {
+                "url": "public/ice/block_snow_2_mid_3.png",
+                "type": "image",
+                "key": "block_snow_2_mid_3"
+            },
+            {
+                "url": "public/ice/block_snow_2_right.png",
+                "type": "image",
+                "key": "block_snow_2_right"
+            },
+            {
+                "url": "public/ice/object_01_gem_blue.png",
+                "type": "image",
+                "key": "object_01_gem_blue"
+            },
+            {
+                "url": "public/ice/object_02_gem_green.png",
+                "type": "image",
+                "key": "object_02_gem_green"
+            },
+            {
+                "url": "public/ice/object_03_gem_red.png",
+                "type": "image",
+                "key": "object_03_gem_red"
+            },
+            {
+                "url": "public/ice/object_04_star.png",
+                "type": "image",
+                "key": "object_04_star"
+            },
+            {
+                "url": "public/ice/object_06_coin.png",
+                "type": "image",
+                "key": "object_06_coin"
+            },
+            {
+                "url": "public/ice/object_iceberg.png",
+                "type": "image",
+                "key": "object_iceberg"
+            },
+            {
+                "url": "public/ice/object_igloo.png",
+                "type": "image",
+                "key": "object_igloo"
+            },
+            {
+                "url": "public/ice/object_snowflake.png",
+                "type": "image",
+                "key": "object_snowflake"
+            },
+            {
+                "url": "public/ice/object_tree_large.png",
+                "type": "image",
+                "key": "object_tree_large"
+            },
+            {
+                "url": "public/ice/object_tree_small.png",
+                "type": "image",
+                "key": "object_tree_small"
+            },
+            {
+                "url": "public/ice/platform_snow.png",
+                "type": "image",
+                "key": "platform_snow"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2
+    }
+}
