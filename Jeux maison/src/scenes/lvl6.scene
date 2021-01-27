@@ -1,0 +1,349 @@
+{
+    "id": "d360c4e9-acf0-4bb2-94aa-f5e5ac775d5f",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "preloadPackFiles": [],
+        "sceneKey": "lvl6",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1024,
+        "borderHeight": 768
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "d8961af6-e678-4d2c-91ec-f9b1c7bf20b6",
+            "label": "bg_icebergs_1",
+            "components": [],
+            "texture": {
+                "key": "bg-icebergs-1"
+            },
+            "x": 608,
+            "y": 384,
+            "scaleX": 1.014,
+            "scaleY": 0.96
+        },
+        {
+            "type": "Image",
+            "id": "79ae6ba7-1dd8-4932-8210-d9bd2e1d9f18",
+            "label": "platform_snow_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 32,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "a5824fa7-cc20-4ba5-9a5c-579628ee76ce",
+            "label": "platform_snow_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 176,
+            "y": 432
+        },
+        {
+            "type": "Image",
+            "id": "31137d21-946c-4e1f-af16-4143ab84e4ae",
+            "label": "platform_snow_png_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 352,
+            "y": 432
+        },
+        {
+            "type": "Image",
+            "id": "070f3447-f03e-4906-b0ed-91b2b05f6c38",
+            "label": "platform_snow_png_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 496,
+            "y": 384
+        },
+        {
+            "type": "Image",
+            "id": "9b3bb771-50ff-494b-970a-a9e805e6bea7",
+            "label": "platform_snow_png_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 608,
+            "y": 528
+        },
+        {
+            "type": "Image",
+            "id": "6fb56fd1-260b-4bc5-a17d-f3f2f8754687",
+            "label": "platform_snow_png_5",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 672,
+            "y": 528
+        },
+        {
+            "type": "Image",
+            "id": "0953d260-dad6-4b61-8987-28d01d44ce11",
+            "label": "platform_snow_png_6",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 816,
+            "y": 496
+        },
+        {
+            "type": "Image",
+            "id": "7c4cbdee-15b1-4ddc-8b15-01f23abcf83a",
+            "label": "platform_snow_png_7",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 928,
+            "y": 432
+        },
+        {
+            "type": "Image",
+            "id": "b3b8ece9-09d6-4d6f-bf51-6701f334430d",
+            "label": "platform_snow_png_8",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 1056,
+            "y": 432
+        },
+        {
+            "type": "Image",
+            "id": "d93ca88d-4891-4741-a365-21ccdb91a063",
+            "label": "platform_snow_png_9",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 1184,
+            "y": 752
+        },
+        {
+            "type": "Image",
+            "id": "131cbf26-31ed-4273-8fa8-10aeb69471cb",
+            "label": "object_04_star_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_04_star.png"
+            },
+            "x": 1200,
+            "y": 704,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "8925bdb3-c4d8-457b-91cc-2df6b74dff6c",
+            "label": "object_03_gem_red_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_03_gem_red.png"
+            },
+            "x": 1136,
+            "y": 528,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "5e75878c-b332-44f6-a4ca-8eef0e1ecfc1",
+            "label": "object_06_coin_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 176,
+            "y": 400,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "904d9736-ab18-4eda-8575-c23276b68cff",
+            "label": "object_06_coin_png_1",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 352,
+            "y": 400,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "3ef132f3-d584-4146-b1e9-b6b5f3a5ec67",
+            "label": "object_06_coin_png_2",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 496,
+            "y": 336,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "f6a1d515-eba0-4ff8-bf16-b5111b7b7827",
+            "label": "object_06_coin_png_3",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 640,
+            "y": 496,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "3298b15f-b146-440e-beb1-79326c75addb",
+            "label": "object_06_coin_png_4",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 816,
+            "y": 464,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "9da2abfd-a20e-4e14-bd6a-2ba98f5f9b27",
+            "label": "object_06_coin_png_5",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 928,
+            "y": 400,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "d7e189e3-1fb5-44a2-95b3-ebdb187c9adb",
+            "label": "object_06_coin_png_6",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 1056,
+            "y": 400,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "31995440-b466-4b03-ad18-9729dfac7348",
+            "label": "object_06_coin_png_7",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 112,
+            "y": 320,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "e991723d-ccf5-4453-9013-2f3995ea3d70",
+            "label": "object_06_coin_png_8",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 272,
+            "y": 368,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "9c4d800e-172f-4513-ac2f-ed596d89c3a6",
+            "label": "object_06_coin_png_9",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 1168,
+            "y": 624,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "034c3714-209a-46a0-b78f-81fa0241160b",
+            "label": "object_02_gem_green_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_02_gem_green.png"
+            },
+            "x": 592,
+            "y": 432,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "3e59c3d8-d830-44f9-a58c-87e3dfe83580",
+            "label": "object_01_gem_blue_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_01_gem_blue.png"
+            },
+            "x": 992,
+            "y": 336,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

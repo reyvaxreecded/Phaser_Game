@@ -1,0 +1,1500 @@
+{
+    "id": "a202f43c-2aec-4ad8-abf8-1be3b525c0e2",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "preloadPackFiles": [],
+        "sceneKey": "lvl4",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1024,
+        "borderHeight": 768
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "60233e97-d0cf-4f70-8809-470df64b6897",
+            "label": "bg_icebergs_1",
+            "components": [],
+            "texture": {
+                "key": "bg-icebergs-1"
+            },
+            "x": 608,
+            "y": 384,
+            "scaleX": 1.014,
+            "scaleY": 0.96
+        },
+        {
+            "type": "Image",
+            "id": "38a69a4d-8b1b-4af2-aa71-ed7655ca1436",
+            "label": "block_slide_up_4_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_4.png"
+            },
+            "x": 608,
+            "y": 288
+        },
+        {
+            "type": "Image",
+            "id": "9e620494-d176-4ce4-95d3-fd50ad86f508",
+            "label": "block_snow_1_left_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_left.png"
+            },
+            "x": 32,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "f8d9ef98-f642-4939-8939-709283c2a125",
+            "label": "block_snow_1_mid_1_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_1.png"
+            },
+            "x": 96,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "cb4077c6-2916-4570-a8c8-7489d730a517",
+            "label": "block_snow_1_mid_1_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_1.png"
+            },
+            "x": 160,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "cb71711c-4b8a-4a78-9f79-85f446438caa",
+            "label": "block_slide_up_1_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_1.png"
+            },
+            "x": 224,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "f0697ba8-553e-4793-8863-ed30a8741ab1",
+            "label": "block_slide_up_2_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_2.png"
+            },
+            "x": 224,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "bd3feaed-7f0e-4af2-91cb-05f0656f6cee",
+            "label": "block_slide_up_3_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_3.png"
+            },
+            "x": 288,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "bf537480-3e4a-477a-ad51-f846afa658ff",
+            "label": "block_slide_up_3_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_3.png"
+            },
+            "x": 352,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "5febfc5d-f0b0-4d9c-a715-09c782fa43ca",
+            "label": "block_slide_up_3_png_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_3.png"
+            },
+            "x": 480,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "12b508e6-c8bc-4911-9621-7c0259f2bb00",
+            "label": "block_slide_up_3_png_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_3.png"
+            },
+            "x": 544,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "32f26391-613a-4933-89e3-94708c8427ab",
+            "label": "block_snow_1_mid_2_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_2.png"
+            },
+            "x": 672,
+            "y": 288
+        },
+        {
+            "type": "Image",
+            "id": "b6cf10bd-f187-4fa8-87aa-f6c93bc43ffd",
+            "label": "block_snow_1_mid_2_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_2.png"
+            },
+            "x": 736,
+            "y": 288
+        },
+        {
+            "type": "Image",
+            "id": "a2e297ad-1479-42c4-affb-0fe930b08cc1",
+            "label": "block_snow_1_mid_2_png_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_2.png"
+            },
+            "x": 800,
+            "y": 288
+        },
+        {
+            "type": "Image",
+            "id": "958c41a4-dc6d-4f0d-bdd5-ce366ea83b43",
+            "label": "block_snow_1_mid_2_png_2_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_2.png"
+            },
+            "x": 1120,
+            "y": 288
+        },
+        {
+            "type": "Image",
+            "id": "c3029949-ad9a-4a90-81bd-c64fdb320bda",
+            "label": "block_snow_1_mid_2_png_2_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_2.png"
+            },
+            "x": 1056,
+            "y": 288
+        },
+        {
+            "type": "Image",
+            "id": "7964cc64-6591-4789-90cd-5b4522aa60d5",
+            "label": "block_snow_1_mid_2_png_2_1_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_2.png"
+            },
+            "x": 1184,
+            "y": 288
+        },
+        {
+            "type": "Image",
+            "id": "ffff1935-b748-4c24-9e33-3f5e80eaefcb",
+            "label": "block_ground_05_mid_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 416,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "6f326591-a9c8-48c5-96d2-5782c18f0e0e",
+            "label": "block_ground_05_mid_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 480,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "0086f5a4-1e19-407f-bb6e-0900e24ebb0a",
+            "label": "block_ground_05_mid_png_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 608,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "541f1279-12fc-4bd0-b23e-d2d8cc1304b2",
+            "label": "block_ground_05_mid_png_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 544,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "0cc37417-d7f3-4b74-bcad-96768dfaa0de",
+            "label": "block_ground_05_mid_png_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 864,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "32a00939-4676-4794-9c7d-57a299161c86",
+            "label": "block_ground_05_mid_png_2_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 800,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "bc911bc4-741e-4488-8a30-99c857f4f1b5",
+            "label": "block_ground_05_mid_png_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 736,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "5b75ac1a-ceac-4f95-9934-258898344a23",
+            "label": "block_ground_05_mid_png_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 672,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "20635424-a0ae-480e-a42a-b15272f70341",
+            "label": "block_ground_05_mid_png_1_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1120,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "7ffac0c2-90e0-4e76-8db4-cfd57c4ed80c",
+            "label": "block_ground_05_mid_png_2_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1056,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "dd1824b7-8dde-45fc-b39f-aa46527c2f78",
+            "label": "block_ground_05_mid_png_1_2_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 992,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "7c7771a3-873c-4782-90c3-51fb5f39fdef",
+            "label": "block_ground_05_mid_png_3_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 928,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "d641cd6e-283a-46ce-b024-76147851a7b9",
+            "label": "block_ground_05_mid_png_1_1_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1056,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "2fbc0cb2-ddb8-4ffe-99f1-261a42c17209",
+            "label": "block_ground_05_mid_png_2_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 992,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "b7af9a7d-85de-4526-a227-2af86db29235",
+            "label": "block_ground_05_mid_png_1_2_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 928,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "6efde71d-649e-4041-87ff-9dc3320a00ea",
+            "label": "block_ground_05_mid_png_3_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 864,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "db55b801-51c7-411d-a41e-ca1403e7d091",
+            "label": "block_ground_05_mid_png_1_1_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 800,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "44af65b2-d4ee-4ef0-84a8-606320bc1f69",
+            "label": "block_ground_05_mid_png_2_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 736,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "ee48380b-1337-4876-a588-a8d1c1e5334f",
+            "label": "block_ground_05_mid_png_1_2_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 672,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "fb387478-c060-4623-9b00-732c6045b8e2",
+            "label": "block_ground_05_mid_png_3_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 608,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "31148176-ddc7-4734-9787-e88bdb3fd6c5",
+            "label": "block_ground_05_mid_png_1_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 544,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "3a53d1a5-97ff-4615-8d91-2dc88b2f5823",
+            "label": "block_ground_05_mid_png_2_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 480,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "89f88ec2-ae20-4fed-bcc0-98d8a13d6450",
+            "label": "block_ground_05_mid_png_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 416,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "e7386b95-1ee4-42da-9b61-e235da709523",
+            "label": "block_ground_05_mid_png_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 352,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "0ad25019-1216-471e-9de4-801e09831eeb",
+            "label": "block_ground_05_mid_png_1_1_1_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 992,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "d1065271-8ad2-4456-b0ee-116979fcc30e",
+            "label": "block_ground_05_mid_png_2_1_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 928,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "c7b5fac5-ad73-4971-9f9d-5e6a5cea9ff4",
+            "label": "block_ground_05_mid_png_1_2_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 864,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "a9f524ba-55ec-40b7-af74-332b327c0b2e",
+            "label": "block_ground_05_mid_png_3_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 800,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "a78ff83d-2227-4bd6-803f-13d3fdcc935d",
+            "label": "block_ground_05_mid_png_1_1_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 736,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "ebed0c95-ca50-4189-9ae8-8413a68b05a7",
+            "label": "block_ground_05_mid_png_2_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 672,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "cd27a8a7-b70b-41d6-9bff-fabea6482316",
+            "label": "block_ground_05_mid_png_1_2_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 608,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "fa65e45a-d7c2-41db-bbf1-1cec7c2a84bd",
+            "label": "block_ground_05_mid_png_3_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 544,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "3fe4fe39-16fe-4072-a13e-f7f463c80483",
+            "label": "block_ground_05_mid_png_1_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 480,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "92938203-4d5b-4b0b-a5c4-f1ae06f65bf2",
+            "label": "block_ground_05_mid_png_2_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 416,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "97f9769a-7ee1-4362-98e2-af7f01fb7c79",
+            "label": "block_ground_05_mid_png_1_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 352,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "4120cc80-a3e7-4549-8f53-0f216b34374d",
+            "label": "block_ground_05_mid_png_5",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 288,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "d644177f-a8fe-4f74-ab53-ecc9fb76a5ca",
+            "label": "block_ground_05_mid_png_1_1_1_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 992,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "bbc17e4f-56e7-451d-9032-2cd7376f12fc",
+            "label": "block_ground_05_mid_png_2_1_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 928,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "f1b31321-c575-4e7c-b27b-cab708d4f147",
+            "label": "block_ground_05_mid_png_1_2_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 864,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "527f4fbf-4810-433e-950e-6490717df3ca",
+            "label": "block_ground_05_mid_png_3_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 800,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "e6fde184-1686-493f-8f99-4e5437346bb7",
+            "label": "block_ground_05_mid_png_1_1_1_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 736,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "91c620ac-605d-4d55-8fb6-8b50b9387b9d",
+            "label": "block_ground_05_mid_png_2_1_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 672,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "ef338a5c-5a2e-43a8-a2ec-e3a240e35270",
+            "label": "block_ground_05_mid_png_1_2_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 608,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "eb17a867-90de-45f1-8fbb-d0820e9d0e17",
+            "label": "block_ground_05_mid_png_3_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 544,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "5b8ba05d-925b-41f2-a1e0-e4950a2adf98",
+            "label": "block_ground_05_mid_png_1_1_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 480,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "b3a4fa7b-9e8f-4ac2-8bdc-9f1893ae6ec4",
+            "label": "block_ground_05_mid_png_2_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 416,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "9e1d48f4-6434-4322-b9a5-9d0377e524ff",
+            "label": "block_ground_05_mid_png_1_5",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 352,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "c350ddde-bcb0-4277-b2f2-8263c900cc42",
+            "label": "block_ground_05_mid_png_6",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 288,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "830c1e1b-1829-4fe7-9925-da3d62e07c1a",
+            "label": "block_ground_05_mid_png_1_1_1_1_3_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1184,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "b4194d18-2f32-4228-9014-44ce6d365526",
+            "label": "block_ground_05_mid_png_2_1_1_3_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1120,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "b24b7a0a-07f6-4f05-8550-5c3b1ba3d03e",
+            "label": "block_ground_05_mid_png_1_2_1_3_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1056,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "bafeaf1a-2093-4c69-b64b-d7dd08c2104e",
+            "label": "block_ground_05_mid_png_1_1_1_1_3_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1184,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "6ae0ebe2-5100-440a-bac5-51701c814a93",
+            "label": "block_ground_05_mid_png_2_1_1_3_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1120,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "e03d14ef-9a9a-42e2-a149-3670c2b4b657",
+            "label": "block_ground_05_mid_png_1_2_1_3_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1056,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "e366db23-812e-4266-8d95-c0dd8c28ee51",
+            "label": "block_ground_05_mid_png_1_1_1_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1184,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "1b820bf9-a6ee-4e0a-b39b-ceaa8dd5d025",
+            "label": "block_ground_05_mid_png_2_1_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1120,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "0e85a638-dae8-4bba-a13f-e4ec887049d1",
+            "label": "block_ground_05_mid_png_1_1_1_1_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1184,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "2712ef84-d905-4ffd-8808-c729659e327d",
+            "label": "block_ground_05_mid_png_1_1_1_1_4_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1184,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "9c723791-db55-4619-b493-b1a3f94cd4e8",
+            "label": "block_ground_05_mid_png_1_1_1_1_5",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1120,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "c9f60a2a-c4b4-4702-b756-d4fb151d2a20",
+            "label": "block_ground_05_mid_png_2_1_1_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1056,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "b074bad3-8ac1-402d-8873-c621c37c2612",
+            "label": "block_ground_05_mid_png_1_2_1_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 992,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "3681dc4c-b6a0-4940-bb2b-e3afb353152f",
+            "label": "block_ground_05_mid_png_3_5",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 672,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "61679099-73a5-42ac-bc41-6e281a05e9dd",
+            "label": "block_ground_05_mid_png_1_1_5",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 608,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "51c9bd93-8dfb-490f-b076-b0dbaf7c0974",
+            "label": "block_ground_05_mid_png_2_5",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 544,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "57af8290-3acc-4759-8b22-f6c74722bab9",
+            "label": "block_ground_05_mid_png_1_1_1_1_4_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1184,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "f7be1726-6310-4745-a6b1-80904cfdefdc",
+            "label": "block_ground_05_mid_png_1_1_1_1_5_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1120,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "373779e9-76a3-48c5-97a7-022c9fadcf3b",
+            "label": "block_ground_05_mid_png_2_1_1_4_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1056,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "e11bb78b-dfdb-4259-ae2a-3e54d13167c3",
+            "label": "block_ground_05_mid_png_1_2_5_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 736,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "83fd7f23-4474-490e-aefe-19c573b6c042",
+            "label": "block_ground_05_mid_png_3_5_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 672,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "6dfa3a9d-a2e2-4f94-86e8-bc213bc57b43",
+            "label": "block_ground_05_mid_png_1_1_5_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 608,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "3fd545a8-b51d-4d8d-a6b3-16a8de0c7178",
+            "label": "block_slide_up_3_png_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_3.png"
+            },
+            "x": 800,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "67a43d63-7c2b-4a85-bd93-41800421a378",
+            "label": "block_slide_up_3_png_5",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_3.png"
+            },
+            "x": 864,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "ee9ffdd9-6f13-4901-8a60-767606ed2d1a",
+            "label": "block_slide_up_3_png_5_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_3.png"
+            },
+            "x": 928,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "3748b486-1928-4057-8e2c-e6c1481fbebc",
+            "label": "block_slide_up_4_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_up_4.png"
+            },
+            "x": 992,
+            "y": 288
+        },
+        {
+            "type": "Image",
+            "id": "c0837143-cd1a-4cda-b8e4-637d95d77c49",
+            "label": "block_ground_05_mid_png_1_2_1_4_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 864,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "ef59a054-c18e-4b89-a701-3d182f78d1bd",
+            "label": "block_ground_05_mid_png_2_1_1_4_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 928,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "3e21fa75-f3ea-4125-bc1a-39e5e2b85b1b",
+            "label": "block_ground_05_mid_png_1_1_1_1_5_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 992,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "61eab21f-653c-428a-b0de-2552906cd043",
+            "label": "block_ground_05_mid_png_1_1_1_1_4_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1056,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "30040e3f-fa76-4817-8956-a95945edb248",
+            "label": "block_ground_05_mid_png_1_2_1_4_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 928,
+            "y": 416
+        },
+        {
+            "type": "Image",
+            "id": "890e7f94-084c-4a10-868a-409c1c05c68f",
+            "label": "block_ground_05_mid_png_1_2_1_4_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 992,
+            "y": 352
+        },
+        {
+            "type": "Image",
+            "id": "aaeefc41-9825-4a2a-a70c-478248d28b82",
+            "label": "block_ground_05_mid_png_1_2_1_4_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1120,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "162f4d0e-bd2e-43ea-be8d-e9ef1b673d8f",
+            "label": "block_ground_05_mid_png_1_2_1_4_5",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 1184,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "3fdcc6b2-0301-4402-aa0b-613ec22ebbe3",
+            "label": "object_igloo",
+            "components": [],
+            "texture": {
+                "key": "object_igloo"
+            },
+            "x": 1152,
+            "y": 192
+        },
+        {
+            "type": "Image",
+            "id": "dd302595-315f-47ea-ad2f-be1fcfb71719",
+            "label": "object_04_star_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_04_star.png"
+            },
+            "x": 1136,
+            "y": 240,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "3a0b1e22-71fc-48b9-b272-84c78ad4d349",
+            "label": "object_03_gem_red_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_03_gem_red.png"
+            },
+            "x": 192,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "5b2d2438-5d8b-442a-8653-aa1c5430b1d8",
+            "label": "object_02_gem_green_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_02_gem_green.png"
+            },
+            "x": 1056,
+            "y": 240,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "e8258e4c-eaff-42f7-81e0-5bdb63a84d38",
+            "label": "object_01_gem_blue_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_01_gem_blue.png"
+            },
+            "x": 736,
+            "y": 496,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "a92b38a4-b267-4280-8643-d9a9fab93b01",
+            "label": "object_06_coin_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 128,
+            "y": 688,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "9713831c-79d9-45c3-b5f6-b3bdbc282efd",
+            "label": "object_06_coin_png_1",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 240,
+            "y": 624,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "c7946409-3255-4c98-8728-80d916adbc6a",
+            "label": "object_06_coin_png_2",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 320,
+            "y": 544,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "f3c628fa-d0c1-4a3d-9f27-a83b175bef39",
+            "label": "object_06_coin_png_3",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 416,
+            "y": 496,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "5f3494de-dbbb-42b1-80f4-e31d257b2a10",
+            "label": "object_06_coin_png_4",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 496,
+            "y": 496,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "4cd3419e-b6a4-4330-bc9e-4573fe54ed99",
+            "label": "object_06_coin_png_5",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 576,
+            "y": 496,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "bfad6d04-2735-4cb9-a9ca-7c8d3090c513",
+            "label": "object_06_coin_png_6",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 672,
+            "y": 496,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "04293dc7-56e7-4c33-9b9d-a80f8d6981ec",
+            "label": "object_06_coin_png_7",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 784,
+            "y": 464,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "41a753ad-a1e3-42a2-8390-6bc696b800fe",
+            "label": "object_06_coin_png_8",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 832,
+            "y": 416,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "5b91d8c7-94b1-42a8-a651-1fbdc03fdb79",
+            "label": "object_06_coin_png_9",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 896,
+            "y": 352,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "02bd1344-7a2c-4007-85dd-80d5b82a56d7",
+            "label": "object_01_gem_blue_png_1",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_01_gem_blue.png"
+            },
+            "x": 688,
+            "y": 240,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "61e45315-b883-4d07-926c-abbb6b89d627",
+            "label": "object_06_coin_png_5_1",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 608,
+            "y": 256,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "874de7a7-d226-40b1-be3b-3fc3b033ac23",
+            "label": "object_06_coin_png_5_2",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 800,
+            "y": 240,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "399d2771-88d7-424a-b475-0178417c43de",
+            "label": "object_06_coin_png_5_1_1",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 528,
+            "y": 336,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "a41d1ac0-04d2-492f-b2ba-78cd1314cd77",
+            "label": "object_06_coin_png_5_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 576,
+            "y": 288,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "49c81e0b-6a6e-4407-93b9-98fec5c4032e",
+            "label": "object_06_coin_png_5_1_1_2",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 480,
+            "y": 384,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}
