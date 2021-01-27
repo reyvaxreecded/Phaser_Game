@@ -765,18 +765,6 @@
         },
         {
             "type": "Image",
-            "id": "d3572e23-31ee-4ded-84db-2ed41db3f052",
-            "label": "platform_snow_png_1_1_2_1",
-            "components": [],
-            "texture": {
-                "key": "plateform",
-                "frame": "platform_snow.png"
-            },
-            "x": 1184,
-            "y": 752
-        },
-        {
-            "type": "Image",
             "id": "8e99d786-1f0e-479f-ae99-84e05ecd58ec",
             "label": "platform_snow_png_2_2_1",
             "components": [],

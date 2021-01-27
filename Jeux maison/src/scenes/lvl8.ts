@@ -231,9 +231,6 @@ class lvl8 extends Phaser.Scene {
 		// platform_snow_png_4
 		this.add.image(864, 752, "plateform", "platform_snow.png");
 		
-		// platform_snow_png_1_1_2_1
-		this.add.image(1184, 752, "plateform", "platform_snow.png");
-		
 		// platform_snow_png_2_2_1
 		this.add.image(1120, 752, "plateform", "platform_snow.png");
 		
