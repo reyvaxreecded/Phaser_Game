@@ -232,45 +232,8 @@ export default class Game extends Phaser.Scene {
         obj1: Phaser.GameObjects.GameObject,
         obj2: Phaser.GameObjects.GameObject
     ) {
-        this.mouse.kill()
+        // this..kill()
     }
-
-    private spawnCoins() {
-        this.coins.children.each(child => {
-            const coin = child as Phaser.Physics.Arcade.Sprite
-            this.coins.killAndHide(coin)
-            coin.body.enable = false
-        })
-
-        const scrollX = this.cameras.main.scrollX
-        const rightEdge = scrollX + this.scale.width
-
-        let x = rightEdge + 100
-
-        const numCoins = Phaser.Math.Between(1, 20)
-
-
-        for (let i = 0; i < numCoins; i++) {
-            const coin = this.coins.get(
-                x,
-                Phaser.Math.Between(100, this.scale.height - 100),
-                TextureKeys.Coin
-            ) as Phaser.Physics.Arcade.Sprite
-
-
-            coin.setVisible(true)
-            coin.setActive(true)
-
-            const body = coin.body as Phaser.Physics.Arcade.StaticBody
-            body.setCircle(body.width * 0.5)
-            body.enable = true
-
-            body.updateFromGameObject()
-
-            x += coin.width * 1.5
-        }
-    }
-
     private handleCollectCoin(
         obj1: Phaser.GameObjects.GameObject,
         obj2: Phaser.GameObjects.GameObject

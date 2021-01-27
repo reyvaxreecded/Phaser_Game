@@ -27,7 +27,7 @@ export default class Pinguin extends Phaser.GameObjects.Container
         scene.physics.add.existing(this)
 
         const body = this.body as Phaser.Physics.Arcade.Body
-        body.setSize(this.pinguin.width,this.pinguin.height)
+        body.setSize(28,this.pinguin.height)
         body.setCollideWorldBounds(true)
         body.setOffset(0,0)
         
@@ -46,7 +46,7 @@ export default class Pinguin extends Phaser.GameObjects.Container
 
                     if (this.cursors.up?.isDown && body.blocked.down) {
 
-                        body.setVelocityY(-150)                        
+                        body.setVelocityY(-180)                        
 
                         this.pinguin.play(AnimationKeys.PinguinJump, true)
                     }
@@ -54,7 +54,7 @@ export default class Pinguin extends Phaser.GameObjects.Container
 
                    else if(this.cursors.down.isDown)
                     {                       
-                        body.setSize(this.pinguin.width, this.pinguin.height * 0.7)
+                        body.setSize(this.pinguin.width , this.pinguin.height * 0.7)
                         body.setOffset(0, 19)                       
 
                         this.pinguin.play(AnimationKeys.PinguinSlide, true)
@@ -71,7 +71,7 @@ export default class Pinguin extends Phaser.GameObjects.Container
                     
                     else
                     {
-                        body.setSize(this.pinguin.width, this.pinguin.height)
+                        body.setSize(this.pinguin.width * 0.85, this.pinguin.height)
                         body.setOffset(0, 0)
                         body.setAccelerationY(0)
                         body.setVelocityX(0)
