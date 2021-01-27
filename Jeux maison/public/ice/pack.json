@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "public/ice/assets/bg-icebergs-red.png",
+                "type": "image",
+                "key": "bg-icebergs-red"
+            },
+            {
                 "url": "public/ice/assets/bg-icebergs-1.png",
                 "type": "image",
                 "key": "bg-icebergs-1"
