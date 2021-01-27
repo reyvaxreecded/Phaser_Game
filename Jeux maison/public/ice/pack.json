@@ -45,8 +45,8 @@
             {
                 "url": "public/ice/assets/pinguin.png",
                 "frameConfig": {
-                    "frameWidth": 32,
-                    "frameHeight": 32,
+                    "frameWidth": 72,
+                    "frameHeight": 64,
                     "startFrame": 0,
                     "endFrame": -1,
                     "spacing": 0,

@@ -1,5 +1,4 @@
 import Phaser from 'phaser'
-import AnimationKeys from '~/consts/AnimationKeys'
 import SceneKeys from '~/consts/SceneKeys'
 import TextureKeys from '~/consts/TextureKeys'
 import LaserObstacle from '~/game/LaserObstacle'

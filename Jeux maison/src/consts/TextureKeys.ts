@@ -1,7 +1,9 @@
 enum TextureKeys 
 {
     Background = 'background',
+    Icebackground = 'background-ice',
     RocketMouse = 'rocket-mouse',
+    Pingouin = 'pingoo',
     MouseHole = 'mouse-hole',
     Window1 = 'window-1',
     Window2 = 'window-2',

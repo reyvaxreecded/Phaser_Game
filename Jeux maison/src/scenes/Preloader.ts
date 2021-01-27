@@ -11,11 +11,16 @@ export default class Preloader extends Phaser.Scene {
 
     preload()
     {
+        this.load.image('background-ice', 'ice/assets/bg-icebergs-1.png')
+		this.load.image('Bleft', 'ice/assets/Bleft.png')
+		this.load.image('Bmid', 'ice/assets/Bmid.png')
+		this.load.image('Bright', 'ice/assets/Bright.png')
         this.load.image(TextureKeys.Background, 'house/bg_repeat_340x640.png')
         this.load.image(
             TextureKeys.MouseHole,
             'house/object_mousehole.png'
         )
+        this.load.atlas(TextureKeys.Pingouin, 'ice/assets/pinguin.png', 'ice/assets/pinguin.json')
 
         this.load.image(TextureKeys.Window1, 'house/object_window1.png')
         this.load.image(TextureKeys.Window2, 'house/object_window2.png')
@@ -32,12 +37,11 @@ export default class Preloader extends Phaser.Scene {
         this.load.image(TextureKeys.LaserEnd, 'house/object_laser_end.png')
         this.load.image(TextureKeys.LaserMiddle, 'house/object_laser.png')
 
-        this.load.image(TextureKeys.Coin, 'house/object_coin.png')
-        
+        this.load.image(TextureKeys.Coin, 'house/object_coin.png')       
     }
 
     create()
     {
-        this.scene.start(SceneKeys.Game)
+        this.scene.start(SceneKeys.Lvl1)
     }
 }
