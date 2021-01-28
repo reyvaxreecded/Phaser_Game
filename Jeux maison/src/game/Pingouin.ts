@@ -1,6 +1,7 @@
 import Phaser from 'phaser'
 import AnimationKeys from '~/consts/AnimationKeys'
 import TextureKeys from '~/consts/TextureKeys'
+import PinguinRun from './PinguinRun'
 
 enum PinguinState 
 {
@@ -95,14 +96,19 @@ export default class Pinguin extends Phaser.GameObjects.Container
                 }
 
             case PinguinState.Killed:
-                {
-                    body.velocity.x *= 0.99
-
-                    if (body.velocity.x <= 5) {
+                {  
+                   
+                    
+                    if(this.body.velocity.y == 0)
+                    {
                         this.PinguinState = PinguinState.Dead
-                    }
+                    }                 
 
                     break
+                }
+            case PinguinState.Dead:
+                {
+                  
                 }
         }
     }
@@ -152,4 +158,16 @@ export default class Pinguin extends Phaser.GameObjects.Container
             frameRate: 10
         })
     }
+    kill()
+    {
+        if (this.PinguinState !== PinguinState.Running) {
+            return
+        }
+
+        this.PinguinState = PinguinState.Killed
+
+        this.pinguin.play(AnimationKeys.PinguinDead)
+      
+    }
+
 }

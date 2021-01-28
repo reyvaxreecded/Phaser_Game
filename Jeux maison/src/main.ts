@@ -1,9 +1,10 @@
 import Phaser from 'phaser'
 
 import Preloader from './scenes/Preloader'
-import Game from './scenes/Game'
 import GameOver from './scenes/GameOver'
 import lvl1 from './scenes/lvl1'
+import { LevelTest } from './scenes/LvlTest'
+import PinguinRun from './game/PinguinRun'
 
 const config: Phaser.Types.Core.GameConfig = {
     type: Phaser.AUTO,
@@ -12,10 +13,11 @@ const config: Phaser.Types.Core.GameConfig = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 200 }
+            gravity: { y: 200 },
+            debug: true
         }
     },
-    scene: [Preloader, lvl1]
+    scene: [Preloader, PinguinRun]
 }
 
 export default new Phaser.Game(config)

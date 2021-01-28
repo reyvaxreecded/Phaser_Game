@@ -1,0 +1,53 @@
+{"frames": {
+
+	"gem_blue.png":
+	{
+		"frame": {"x":0,"y":0,"w":40,"h":40},
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+		"sourceSize": {"w":40,"h":40}
+	},
+	"gem_green.png":
+	{
+		"frame": {"x":40,"y":0,"w":40,"h":40},
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+		"sourceSize": {"w":40,"h":40}
+	},
+	"gem_red.png":
+	{
+		"frame": {"x":80,"y":0,"w":40,"h":40},
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+		"sourceSize": {"w":40,"h":40}
+	},
+	"object_04_star.png":
+	{
+		"frame": {"x":120,"y":0,"w":40,"h":40},
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+		"sourceSize": {"w":40,"h":40}
+	},
+	"object_06_coin.png":
+	{
+		"frame": {"x":160,"y":0,"w":40,"h":40},
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+		"sourceSize": {"w":40,"h":40}
+	}
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "collectible.png",
+	"format": "RGBA8888",
+	"size": {"w":200,"h":40},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7ab47720b793e15adf59717b99968644:c1e2abcedfc6452d02007695cb87520a:cb51c189c8fe97ec8b788582e977563e$"
+}
+}

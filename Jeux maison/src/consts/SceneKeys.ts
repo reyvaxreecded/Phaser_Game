@@ -2,7 +2,7 @@ enum SceneKeys
 {
     Preloader = 'preloader',
     Game = 'game',
-    Lvl1 = 'lvl1',
+    Lvl = 'pinguinrun',
     GameOver = 'game-over'
 }
 
