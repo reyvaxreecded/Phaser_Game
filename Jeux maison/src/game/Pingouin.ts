@@ -21,8 +21,7 @@ export default class Pinguin extends Phaser.GameObjects.Container
 
         this.pinguin = scene.add.sprite(1, 1, TextureKeys.Pingouin).setOrigin(0)
 
-        this.createAnimation()
-        this.pinguin.play(AnimationKeys.PinguinRun)
+        this.createAnimation()        
         this.add(this.pinguin)
     
         scene.physics.add.existing(this)
@@ -64,10 +63,26 @@ export default class Pinguin extends Phaser.GameObjects.Container
                     else if(this.cursors.left.isDown)
                     {
                         body.setVelocityX(-100)
+                        if (body.blocked.down)
+                        {
+                            this.pinguin.play(AnimationKeys.PinguinRun, true)
+                        }
+                        else
+                        {
+                            this.pinguin.play(AnimationKeys.PinguinFall, true)
+                        }
                     }
                     else if(this.cursors.right.isDown)
                     {
                         body.setVelocityX(100)
+                        if (body.blocked.down)
+                        {
+                            this.pinguin.play(AnimationKeys.PinguinRun, true)
+                        }
+                        else
+                        {
+                            this.pinguin.play(AnimationKeys.PinguinFall, true)
+                        }
                     }
                     
                     else
@@ -79,15 +94,12 @@ export default class Pinguin extends Phaser.GameObjects.Container
 
                         if (body.blocked.down)
                         {               
-                            this.pinguin.play(AnimationKeys.PinguinRun, true)
+                            this.pinguin.play(AnimationKeys.PinguinStand, true)
                         }
                         else 
                         {
                             this.pinguin.play(AnimationKeys.PinguinFall, true)
-                        }               
-
-                                                   
-                        
+                        }       
                     }
 
                     
@@ -107,8 +119,8 @@ export default class Pinguin extends Phaser.GameObjects.Container
                     break
                 }
             case PinguinState.Dead:
-                {
-                  
+                {                       
+                    setTimeout(()=>this.scene.scene.start('pinguinrun'),500)
                 }
         }
     }
@@ -156,6 +168,13 @@ export default class Pinguin extends Phaser.GameObjects.Container
                     suffix: '.png'
                 }),
             frameRate: 10
+        })
+        this.pinguin.anims.create({
+            key: AnimationKeys.PinguinStand,
+            frames: [{
+                key: TextureKeys.Pingouin,
+                frame: 'penguin_walk01.png'
+            }]
         })
     }
     kill()

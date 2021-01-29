@@ -5,6 +5,7 @@ enum AnimationKeys
     RocketMouseFall = 'rocket-mouse-fall',
     RocketMouseJump = 'rocket-mouse-jump',
     RocketMouseDead = 'rcoket-mouse-dead',
+    PinguinStand = 'pinguin-stand',
     PinguinRun = 'pinguin-run',
     PinguinJump = 'pinguin-jump',
     PinguinFall = 'pinguin-fall',

@@ -16,6 +16,7 @@ export default class Preloader extends Phaser.Scene {
         this.load.atlas(TextureKeys.Colectible, 'assets/ice/collectible.png', 'assets/ice/collectible.json')
         this.load.atlas(TextureKeys.Tile, 'assets/ice/tiles.png', 'assets/ice/tiles.json')
         this.load.atlas(TextureKeys.Decorations, 'assets/ice/decorations.png', 'assets/ice/decorations.json')  
+        this.load.atlas(TextureKeys.UI, 'assets/ice/UI/UI.png', 'assets/ice/UI/UI.json') 
     }
 
     create()

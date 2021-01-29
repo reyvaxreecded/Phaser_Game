@@ -5,7 +5,8 @@ enum TextureKeys
     Colectible = 'colectible',
     Tile = 'tile',
     Decorations = 'decorations',
-    Icerberg = 'iceberg'
+    Icerberg = 'iceberg',
+    UI = 'ui'
 }
 
 export default TextureKeys
