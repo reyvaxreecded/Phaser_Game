@@ -58,11 +58,33 @@ export default class Pinguin extends Phaser.GameObjects.Container
                         body.setOffset(0, 19)                       
 
                         this.pinguin.play(AnimationKeys.PinguinSlide, true)
+                        if(this.cursors.right.isDown)
+                        {
+                            this.pinguin.setFlipX(false)
+                            body.setVelocityX(100)
+                        }
+                        else if(this.cursors.left.isDown)
+                        {
+                            this.pinguin.setFlipX(true)
+                            body.setVelocityX(-100)
+                        }                       
+                        else
+                        {
+                            body.setVelocityX(0)
+                        }
                     }
                     
                     else if(this.cursors.left.isDown)
                     {
-                        body.setVelocityX(-100)
+                        this.pinguin.setFlipX(true)
+                        if(this.cursors.shift.isDown)
+                        {
+                            body.setVelocityX(-200)                            
+                        }
+                        else
+                        {
+                            body.setVelocityX(-100)
+                        }    
                         if (body.blocked.down)
                         {
                             this.pinguin.play(AnimationKeys.PinguinRun, true)
@@ -74,7 +96,15 @@ export default class Pinguin extends Phaser.GameObjects.Container
                     }
                     else if(this.cursors.right.isDown)
                     {
-                        body.setVelocityX(100)
+                        this.pinguin.setFlipX(false)
+                        if(this.cursors.shift.isDown)
+                        {
+                            body.setVelocityX(200)                            
+                        }
+                        else
+                        {
+                            body.setVelocityX(100)
+                        }                        
                         if (body.blocked.down)
                         {
                             this.pinguin.play(AnimationKeys.PinguinRun, true)

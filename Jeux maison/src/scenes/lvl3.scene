@@ -1,0 +1,714 @@
+{
+    "id": "b2a914e6-3832-4f31-bd07-56276af535d3",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "preloadPackFiles": [],
+        "sceneKey": "lvl3",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1024,
+        "borderHeight": 768
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "84dace47-42c4-4705-9d98-b4835b9d7f6b",
+            "label": "block_ground_05_mid_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 342,
+            "y": 187,
+            "visible": false,
+            "width": 64,
+            "height": 64
+        },
+        {
+            "type": "Image",
+            "id": "2c31b8f9-c65c-4ae9-8ed8-9f488f35d51c",
+            "label": "bg_icebergs_2",
+            "components": [],
+            "texture": {
+                "key": "bg-icebergs-2"
+            },
+            "x": 609,
+            "y": 384,
+            "scaleX": 1.014,
+            "scaleY": 0.96
+        },
+        {
+            "type": "Image",
+            "id": "4543daa4-1dc5-41a3-8bea-6450079e7eaa",
+            "label": "block_snow_1_left_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_left.png"
+            },
+            "x": 32,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "d2ad65e1-a4a6-4ef7-a4bc-f6f508c11e25",
+            "label": "block_snow_1_mid_1_png_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_1.png"
+            },
+            "x": 96,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "6c62c0e3-a329-4001-9d97-1dcd721f046a",
+            "label": "block_snow_1_mid_1_png_2_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_1.png"
+            },
+            "x": 224,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "f9838b22-cc12-486c-b25e-1371dab90da6",
+            "label": "block_snow_1_mid_1_png_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_1.png"
+            },
+            "x": 160,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "0776526a-20c5-466e-9f72-2ad391ad8012",
+            "label": "block_slide_down_4_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_down_4.png"
+            },
+            "x": 288,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "e74ff0b6-33a1-43e3-a952-44725de8ea6a",
+            "label": "block_ground_05_mid_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 32,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "8aefc783-27fa-4c2e-a46e-78330fa9e6e3",
+            "label": "block_ground_05_mid_png_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 96,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "f97da389-f1d8-4831-a98b-09714bf09eb2",
+            "label": "block_ground_05_mid_png_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 160,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "30d746c5-67b5-4b65-8713-0252d1ef1652",
+            "label": "block_ground_05_mid_png_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 224,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "ef51175d-9746-4bdc-acf0-f408ad94c9c1",
+            "label": "block_ground_05_mid_png_1_4",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 32,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "35b261b6-537b-478e-91f1-1d895fc139a3",
+            "label": "block_ground_05_mid_png_1_2_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 96,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "a1ca5977-5887-4d7e-addd-ce5eaa89753e",
+            "label": "block_ground_05_mid_png_1_3_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 160,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "2f2e842b-0884-4402-8cb5-f1cf926fa030",
+            "label": "block_ground_05_mid_png_1_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 224,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "68e84269-65ca-404f-aca0-488b2d36e038",
+            "label": "block_ground_05_mid_png_1_1_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 288,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "bd97e3a5-c062-4ff0-b041-21b81af4a882",
+            "label": "block_ground_05_mid_png_1_1_1_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_ground_05_mid.png"
+            },
+            "x": 288,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "7bcf3bdc-bfb3-412c-bb78-17552a8b5860",
+            "label": "block_slide_down_2_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_down_2.png"
+            },
+            "x": 352,
+            "y": 672
+        },
+        {
+            "type": "Image",
+            "id": "66cff4f2-b5a1-4f2d-a320-4bb2fb6936e5",
+            "label": "block_slide_down_1_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_slide_down_1.png"
+            },
+            "x": 352,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "fd4bdb72-a68a-4a9d-af84-73d62a70aedd",
+            "label": "block_snow_1_mid_1_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_1.png"
+            },
+            "x": 416,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "49b75017-6b73-4c56-9d8a-e1ec7c4336b1",
+            "label": "object_04_star_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_04_star.png"
+            },
+            "x": 1184,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "90aeacc4-9ef2-4dc0-9a0e-33bcde062a73",
+            "label": "block_snow_1_right_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_right.png"
+            },
+            "x": 1184,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "c5b6514b-25ac-4273-aab4-659834f3e5df",
+            "label": "platform_snow_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 560,
+            "y": 528
+        },
+        {
+            "type": "Image",
+            "id": "676ee333-65f7-49d8-ba83-d80e7d6e5166",
+            "label": "platform_snow_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 672,
+            "y": 496
+        },
+        {
+            "type": "Image",
+            "id": "ec976aa3-25db-45c0-90fa-52038e529ef1",
+            "label": "platform_snow_png_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 800,
+            "y": 544
+        },
+        {
+            "type": "Image",
+            "id": "d7193a0d-c5b8-4048-9ace-eeece0c060f4",
+            "label": "platform_snow_png_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 416,
+            "y": 560
+        },
+        {
+            "type": "Image",
+            "id": "1a2220c5-cfa7-446e-b0fb-f78170ded02d",
+            "label": "platform_snow_png_1_3",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "platform_snow.png"
+            },
+            "x": 960,
+            "y": 608
+        },
+        {
+            "type": "Image",
+            "id": "d036263c-02d7-4a16-8209-ac1be270abd7",
+            "label": "block_snow_1_mid_3_png",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_3.png"
+            },
+            "x": 992,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "62d6446e-6e9d-402e-a328-9f1ebfc75d5e",
+            "label": "block_snow_1_mid_3_png_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_3.png"
+            },
+            "x": 928,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "dae26d87-0f09-431c-a90d-74005fd2f1b7",
+            "label": "block_snow_1_mid_3_png_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_3.png"
+            },
+            "x": 800,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "0f465af6-c8ae-4339-9d6e-f642f90e5a7d",
+            "label": "block_snow_1_mid_3_png_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_3.png"
+            },
+            "x": 864,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "5e4d2141-adde-4ba1-8d9b-17ef8a525831",
+            "label": "block_snow_1_mid_3_png_2_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_3.png"
+            },
+            "x": 608,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "9d712bbc-7093-4824-9a2a-d5301dfbee59",
+            "label": "block_snow_1_mid_3_png_1_2",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_3.png"
+            },
+            "x": 672,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "ef694c75-c489-4102-8a8d-574377d35a94",
+            "label": "block_snow_1_mid_3_png_1_1_1_1",
+            "components": [],
+            "texture": {
+                "key": "plateform",
+                "frame": "block_snow_1_mid_3.png"
+            },
+            "x": 480,
+            "y": 736
+        },
+        {
+            "type": "Image",
+            "id": "e8ed8d8d-c26a-4670-897c-5869a6e2df33",
+            "label": "object_06_coin_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 208,
+            "y": 544,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "175f5967-6cb3-47be-94f2-088dafe9b7ec",
+            "label": "object_06_coin_png_2",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 560,
+            "y": 496,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "efd14bbd-c07f-4feb-876f-886eff105f7e",
+            "label": "object_06_coin_png_2_1",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 672,
+            "y": 448,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "4dd596cf-488a-4edf-bf12-2dfdb40cdf26",
+            "label": "object_06_coin_png_2_2",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 800,
+            "y": 512,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "9645b8c6-33c1-4b06-bb8e-195ae8cd4868",
+            "label": "object_06_coin_png_2_3",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 960,
+            "y": 576,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "bdb2dfba-873a-4163-bbcc-f2f0e2f6a364",
+            "label": "object_06_coin_png_2_4",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 1088,
+            "y": 544,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "9d72e98c-a9d9-4203-9747-6c3eabf65310",
+            "label": "object_06_coin_png_2_5",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 896,
+            "y": 528,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "2139b184-fbd3-4c0a-994c-985a4c82c7d3",
+            "label": "object_03_gem_red_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_03_gem_red.png"
+            },
+            "x": 416,
+            "y": 512,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "a2edc6ac-3148-4164-ac41-7737d6ef45ba",
+            "label": "object_02_gem_green_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_02_gem_green.png"
+            },
+            "x": 544,
+            "y": 656,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "52cd000b-f6cb-4a6c-adc3-c91ef646f9c3",
+            "label": "object_01_gem_blue_png",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_01_gem_blue.png"
+            },
+            "x": 1088,
+            "y": 656,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "7f7804f4-c0b0-4c6c-94a0-a0dc2560728a",
+            "label": "object_06_coin_png_1",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 304,
+            "y": 592,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "cab2750c-a357-41fe-9903-468fe37334a5",
+            "label": "object_06_coin_png_3",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 384,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "4f8e01a3-bc6d-4395-9ea0-2c5dd877f5ef",
+            "label": "object_06_coin_png_4",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 480,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "c28b13ec-87d1-4600-b2c4-e7d274df7b1f",
+            "label": "object_06_coin_png_4_2",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 624,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "fe228058-2cc3-4e97-8447-a0dfe0b7f10f",
+            "label": "object_06_coin_png_4_3",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 816,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "656da17c-d853-46e5-a50c-6b2b571b6a89",
+            "label": "object_06_coin_png_4_4",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 912,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "a4dd16ed-4442-4937-a7a7-ab7ce1301bfa",
+            "label": "object_06_coin_png_4_5",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 976,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "fcf8e3f6-e608-42e4-9c24-9bcabac4de86",
+            "label": "object_06_coin_png_4_2_1",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 736,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "b7b71bf9-3f55-486e-bea5-3b8baf915531",
+            "label": "object_06_coin_png_4_2_2",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 672,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Image",
+            "id": "3df8e4db-6b8f-471d-a106-5f18d043a33d",
+            "label": "object_06_coin_png_4_2_3",
+            "components": [],
+            "texture": {
+                "key": "collectible",
+                "frame": "object_06_coin.png"
+            },
+            "x": 864,
+            "y": 672,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

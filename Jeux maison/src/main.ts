@@ -1,9 +1,5 @@
 import Phaser from 'phaser'
-
 import Preloader from './scenes/Preloader'
-import GameOver from './scenes/GameOver'
-import lvl1 from './scenes/lvl1'
-import { LevelTest } from './scenes/LvlTest'
 import PinguinRun from './game/PinguinRun'
 
 const config: Phaser.Types.Core.GameConfig = {
@@ -14,7 +10,7 @@ const config: Phaser.Types.Core.GameConfig = {
         default: 'arcade',
         arcade: {
             gravity: { y: 200 },
-            debug: true
+            debug:true
         }
     },
     scene: [Preloader, PinguinRun]
