@@ -1,6 +1,9 @@
+import { Body } from 'matter';
 import Phaser from 'phaser'
+import AnimationKeys from '~/consts/AnimationKeys';
 import TextureKeys from '~/consts/TextureKeys'
 import Pinguin from '~/game/Pingouin'
+import TweenHelper from './TweenHelper';
 
 interface ObjectBaseData {
     x: number;
@@ -42,6 +45,8 @@ export default class PinguinRun extends Phaser.Scene {
     private icebackground!: Phaser.GameObjects.TileSprite
     private cursors!: Phaser.Types.Input.Keyboard.CursorKeys
     private tiles!: Phaser.Physics.Arcade.StaticGroup
+    private infiniteTiles!: Phaser.GameObjects.TileSprite
+    private Title!:Phaser.GameObjects.Image
     private pinguin!: Pinguin
     private coins!: Phaser.Physics.Arcade.StaticGroup
     private gems!: Phaser.Physics.Arcade.StaticGroup
@@ -57,66 +62,98 @@ export default class PinguinRun extends Phaser.Scene {
     private coinCount = 0
     private count = 0
     private gemCount = 0
-    
+    private totalcoin = 0
+    private totalgem = 0
 
     constructor() {
         super('pinguinrun')        
     }
-    create() { 
+    create() 
+    { 
         this.coinCount = 0
         this.count = 0
         this.gemCount = 0   
         
-        if(this.lvlNumber > 0){
-            fetch(`assets/ice/Level/Lvl${this.lvlNumber}.json`)
-                .then(res => res.json())            
-                .then(lvlData => this.loadLevel(lvlData)) 
-        } else
+        switch(this.lvlNumber)
         {
-            fetch(`assets/ice/Level/Lvl${this.lvlNumber}.json`)
-            .then(res => res.json())            
-            .then(lvlData => this.startMenu(lvlData)) 
+            default:
+                fetch(`assets/ice/Level/Lvl${this.lvlNumber}.json`)
+                    .then(res => res.json())            
+                    .then(lvlData => this.loadLevel(lvlData))
+                break                
+            case 0:                                           
+                fetch(`assets/ice/Level/Lvl${this.lvlNumber}.json`)
+                    .then(res => res.json())            
+                    .then(lvlData => this.startMenu(lvlData))                            
+                break 
         }            
             
         this.cursors = this.input.keyboard.createCursorKeys()
     }
-    startMenu(lvlData: LevelData)
+    update( )
+    {
+        if(this.cursors.space.isDown && this.pinguin.active==false) 
+        {                     
+            this.continue()
+        }    
+        switch(this.lvlNumber)
+        {
+            default:
+                return
+            case 0:
+                if(this.infiniteTiles != undefined){
+                    this.icebackground.tilePositionX+=1
+                    this.infiniteTiles.tilePositionX+=1    
+                }
+                else
+                {
+                    console.log('erreur')
+                } 
+                break           
+        }    
+    }
+    protected startMenu(lvlData: LevelData)
     {
         this.lvlData = lvlData;
-
 
         const width = this.scale.width
         const height = this.scale.height
 
         this.icebackground = this.add.tileSprite(0, 0, width, height, TextureKeys.Icebackground)
             .setOrigin(0)
-            .setScrollFactor(0, 0);
+            .setScrollFactor(0)           
+                        
+            
+        this.infiniteTiles = this.add.tileSprite(0, 704, width, 64, TextureKeys.StartMenuTile)
+            .setOrigin(0)
+            .setScrollFactor(0)
 
-        this.createWorld(this.lvlData.world);
+        this.Title = this.add.image(10, 32, TextureKeys.Title)
+        .setOrigin(0)
+        .setScrollFactor(0)
 
-        this.createPlayer(this.lvlData.playerStart);
+        this.add.existing(this.Title)       
+        const screenText = this.add.text(72, 512, 'Appuyez sur espace pour commencer',{fontSize: '42px',fontFamily: 'Arial Black', color: '0x000000'}).setOrigin(0).setScrollFactor(0);
+        TweenHelper.flashElement(this, screenText)
+
+        this.createPlayer(this.lvlData.playerStart)        
 
         this.physics.world.setBounds(
             0, 0,
-            1216.1, this.scale.height,
+            Number.MAX_SAFE_INTEGER, this.scale.height,
             false, false, true, true
-        )
+        )        
 
-        this.physics.add.collider(this.pinguin, this.tiles)
-        this.cameras.main.setBounds(0, 0, 1216.1, this.scale.height)
-
-        this.cameras.main.startFollow(this.pinguin)
-
+        this.physics.world.gravity.setTo(0)    
         
-    }
-    update()
-    {
-        if(this.cursors.space.isDown && this.pinguin.active==false) 
-        {                     
-            this.lvlNumber += 1
-            this.scene.start('pinguinrun')
-            this.cursors.space.isDown=false  
-        }
+        this.pinguin.setActive(false )
+        
+        this.cameras.main.setBounds(0, 0, Number.MAX_SAFE_INTEGER, this.scale.height)  
+        
+        this.cameras.main.startFollow(this.pinguin)
+        
+        this.pinguin.startAutorun()
+
     }
     public loadLevel(lvlData: LevelData) {
         this.lvlData = lvlData;
@@ -127,7 +164,7 @@ export default class PinguinRun extends Phaser.Scene {
 
         this.icebackground = this.add.tileSprite(0, 0, width, height, TextureKeys.Icebackground)
             .setOrigin(0)
-            .setScrollFactor(0, 0);
+            .setScrollFactor(0);
 
         this.createObstacles(this.lvlData.obstacles);
 
@@ -142,7 +179,12 @@ export default class PinguinRun extends Phaser.Scene {
         this.creeateUI()
 
     }
-
+    protected continue()
+    {
+        this.lvlNumber += 1
+        this.scene.start('pinguinrun')
+          
+    }
     private creeateUI() {
         this.scoreLabel = this.add.text(10, 10, `${this.coinCount}/10`, {
             fontSize: '24px',
@@ -196,6 +238,8 @@ export default class PinguinRun extends Phaser.Scene {
 
             this.gemCount += 1
 
+            this.totalgem +=1
+
             this.count += 1
 
             switch(obj.getData('color'))
@@ -221,6 +265,8 @@ export default class PinguinRun extends Phaser.Scene {
             obj.body.enable = false
 
             this.coinCount += 1
+
+            this.totalcoin += 1
 
             this.count += 1
 
@@ -288,7 +334,6 @@ export default class PinguinRun extends Phaser.Scene {
         }
 
     }
-
     protected createCollectibles(collectiblesData: CollectiblesData) {
         this.gems = this.physics.add.staticGroup()
         this.coins = this.physics.add.staticGroup()
@@ -327,7 +372,7 @@ export default class PinguinRun extends Phaser.Scene {
         const textureName = `${tileData.key}.png`;
 
         this.tiles.create(tileData.x, tileData.y, TextureKeys.Tile, textureName)
-            .setOrigin(0.5)
+            .setOrigin(0.5)            
     }
     protected createGem(gemData: GemData) {
         const textureName = `gem_${gemData.color}.png`;
@@ -357,6 +402,7 @@ export default class PinguinRun extends Phaser.Scene {
         obj.body.enable = false
                 
         this.pinguin.setActive(false)
+
         this.showScore()
     }
     protected showScore()
@@ -375,5 +421,22 @@ export default class PinguinRun extends Phaser.Scene {
         const next = this.add.text(68.5, 238, `Appuyez sur espace \r\n     pour continuer`, style3)
         .setOrigin(0)
         const container = this.add.container(352, 220, [rectangle,end, coinCount, gemCount, next]).setScrollFactor(0)        
+    }
+    protected endGame()
+    {
+    const rectangle = this.add.rectangle(0, 0, 350, 300, 0x000000, 0.5)
+    .setOrigin(0)        
+    const style = {font: "20px Coursier Bold", fill: "#fff"}
+    const style2 = {font: "32px Arial Black", fill: "#fff"}
+    const style3 = {font: "20px Arial Black", fill: "#fff"}
+    const end = this.add.text(22.5, 10, `Vous avez terminé le jeu`, style2)
+    .setOrigin(0)
+    const coinCount = this.add.text(126.5,120,`Pieces: ${this.totalcoin}/40`,style)
+    .setOrigin(0)
+    const gemCount = this.add.text(126.5, 145, `Gemmes: ${this.totalgem}/12`, style)
+    .setOrigin(0)
+    const next = this.add.text(68.5, 238, `Merci d'avoir jouer!`, style3)
+    .setOrigin(0)
+    const container = this.add.container(352, 220, [rectangle,end, coinCount, gemCount, next]).setScrollFactor(0)  
     }
 }

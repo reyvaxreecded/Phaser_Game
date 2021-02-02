@@ -11,6 +11,8 @@ export default class Preloader extends Phaser.Scene {
     preload()
     {
         this.load.image(TextureKeys.Icebackground, 'assets/ice/bg-icebergs-1.png')
+        this.load.image(TextureKeys.StartMenuTile, 'assets/ice/startMenuTile.png')
+        this.load.image(TextureKeys.Title, 'assets/ice/title.png')
         this.load.image(TextureKeys.Icerberg, 'assets/ice/object_iceberg.png')
         this.load.atlas(TextureKeys.Pingouin, 'characters/pinguin.png', 'characters/pinguin.json')
         this.load.atlas(TextureKeys.Colectible, 'assets/ice/collectible.png', 'assets/ice/collectible.json')

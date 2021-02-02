@@ -83,23 +83,11 @@
             "x": 992, 
             "y": 736,
             "key": "Bmid"
-        },
-        {
-            "x": 1056, 
-            "y": 736,
-            "key": "Bmid"
-        },
-        {
-            "x": 1120, 
-            "y": 736,
-            "key": "Bmid"
-        },
-        {
-            "x": 1184, 
-            "y": 736,
-            "key": "Bmid"
         }
-    ],
+
+
+
+     ],
     "collectibles": [ ],
     "obstacles": [ ],
     "ennemies": [

@@ -6,6 +6,7 @@ import PinguinRun from './PinguinRun'
 enum PinguinState 
 {
     Running,
+    AutoRun,
     Killed,
     Dead
 }
@@ -41,6 +42,8 @@ export default class Pinguin extends Phaser.GameObjects.Container
 
         switch (this.PinguinState) {
 
+            case PinguinState.AutoRun:               
+                break
             case PinguinState.Running:
                 {
 
@@ -155,7 +158,7 @@ export default class Pinguin extends Phaser.GameObjects.Container
         }
     }
 
-    private createAnimation() {
+    private createAnimation(){
         this.pinguin.anims.create({
             key: AnimationKeys.PinguinRun,
             frames: this.pinguin.anims.generateFrameNames(TextureKeys.Pingouin, {
@@ -217,6 +220,12 @@ export default class Pinguin extends Phaser.GameObjects.Container
 
         this.pinguin.play(AnimationKeys.PinguinDead)
       
+    }
+    startAutorun()
+    {
+        this.PinguinState = PinguinState.AutoRun   
+        this.body.velocity.x = 50     
+        this.pinguin.play(AnimationKeys.PinguinRun, true)
     }
 
 }
