@@ -8,6 +8,7 @@ enum TextureKeys
     StartMenuTile = 'startmenutile',
     Decorations = 'decorations',
     Icerberg = 'iceberg',
+    Snowfalkes = 'snowflakes',
     UI = 'ui'
 }
 

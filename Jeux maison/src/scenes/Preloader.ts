@@ -14,6 +14,7 @@ export default class Preloader extends Phaser.Scene {
         this.load.image(TextureKeys.StartMenuTile, 'assets/ice/startMenuTile.png')
         this.load.image(TextureKeys.Title, 'assets/ice/title.png')
         this.load.image(TextureKeys.Icerberg, 'assets/ice/object_iceberg.png')
+        this.load.spritesheet(TextureKeys.Snowfalkes, 'assets/ice/snowflakes.png', {frameWidth: 17, frameHeight: 17})
         this.load.atlas(TextureKeys.Pingouin, 'characters/pinguin.png', 'characters/pinguin.json')
         this.load.atlas(TextureKeys.Colectible, 'assets/ice/collectible.png', 'assets/ice/collectible.json')
         this.load.atlas(TextureKeys.Tile, 'assets/ice/tiles.png', 'assets/ice/tiles.json')
@@ -24,5 +25,6 @@ export default class Preloader extends Phaser.Scene {
     create()
     {
         this.scene.start(SceneKeys.Lvl)
+        
     }
 }

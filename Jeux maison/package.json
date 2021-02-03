@@ -4,9 +4,10 @@
     "description": "A simple test of phaser",
     "scripts": {
         "start": "parcel src/index.html -p 8000",
-        "build": "parcel build src/index.html --out-dir dist",
+        "build": "parcel build src/index.html --out-dir dist && compile-levels-manifest",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
+        "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+        "compile-levels-manifest": "node ./scripts/compile-levels-manifest.js"        
     },
     "author": "Reyvax",
     "license": "MIT",

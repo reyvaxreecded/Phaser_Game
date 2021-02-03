@@ -224,8 +224,7 @@ export default class Pinguin extends Phaser.GameObjects.Container
     startAutorun()
     {
         this.PinguinState = PinguinState.AutoRun   
-        this.body.velocity.x = 50     
-        this.pinguin.play(AnimationKeys.PinguinRun, true)
+        this.pinguin.play(AnimationKeys.PinguinRun, true) 
     }
 
 }

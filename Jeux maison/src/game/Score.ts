@@ -1,55 +1,21 @@
 import Phaser from 'phaser'
-import Level from './Level'
+import PinguinRunBase from './PinguinRunBase'
 
-
-export default class Score extends Phaser.Scene
-{
-    private coinCount = 0
-    private gemCount = 0
-    constructor()
-    {
-        super('score')
+export default class Score extends PinguinRunBase {
+    public showScore() {
+        const rectangle = this.add.rectangle(0, 0, 350, 300, 0x000000, 0.5)
+            .setOrigin(0.5)
+        const style = { font: "20px Coursier Bold", fill: "#fff" }
+        const style2 = { font: "32px Arial Black", fill: "#fff" }
+        const style3 = { font: "20px Arial Black", fill: "#fff" }
+        const end = this.add.text(0, -120, `Niveau ${this.lvlNumber} Terminé`, style2)
+            .setOrigin(0.5)
+        const coinCount = this.add.text(0, -10, `Pieces: ${this.coinCount}/10`, style)
+            .setOrigin(0.5)
+        const gemCount = this.add.text(0, 20, `Gemmes: ${this.gemCount}/3`, style)
+            .setOrigin(0.5)
+        const next = this.add.text(0, 120, `Appuyez sur espace \r\n     pour continuer`, style3)
+            .setOrigin(0.5)
+        this.add.container(512, 384, [rectangle, end, coinCount, gemCount, next]).setScrollFactor(0)
     }
-    restart(currentScene: Level)
-    {
-        this.coinCount = 0
-        this.gemCount = 0
-
-        currentScene.scene.restart()
-    }
-    private handleCollectObj(
-        obj1: Phaser.GameObjects.GameObject,
-        obj2: Phaser.GameObjects.GameObject,
-        objGroup:Phaser.Physics.Arcade.StaticGroup,
-        scoreLabel: Phaser.GameObjects.Text,
-        currentScene: Level
-    ) {
-
-		const obj = obj2 as Phaser.Physics.Arcade.Sprite		
-
-        objGroup.killAndHide(obj)
-
-        obj.body.enable = false
-
-        switch(obj2)
-        {
-            case currentScene.gems:
-                this.gemCount += 1
-                break
-            case currentScene.coins:
-                this.coinCount +=1
-                break
-            default:
-                return
-        }   
-
-		scoreLabel.text = `Piece: ${this.coinCount}/10 Gemmes: ${this.gemCount}/3`
-		     
-    }
-    scoreLabel = this.add.text(10, 10, `Piece: ${this.coinCount}/10 Gemmes: ${this.gemCount}/3`, {
-        fontSize: '24px',
-        color: '#000000',            
-        shadow: { fill: true, blur: 0, offsetY: 0 },
-        padding: { left: 15, right: 15, top: 10, bottom: 10 }
-    })
 }
