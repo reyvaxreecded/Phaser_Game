@@ -2,35 +2,96 @@ import Phaser from 'phaser'
 import TextureKeys from '~/consts/TextureKeys'
 import Pinguin from '~/game/Pingouin'
 import EndGame from './Endgame';
-import PinguinRunBase from './PinguinRunBase';
 import TweenHelper from './TweenHelper';
 import Ui from './Ui';
-
-export default class PinguinRun extends PinguinRunBase {
+import {LevelData, ObjectBaseData, CoinData, GemData, CollectibleData, KeyedObjectData, TileData, ObstacleData, Collectible, WorldData, PlayerStartData, CollectiblesData, ObstaclesData, Base} from '~/consts/Interfaces'
+enum gameState
+{
+    Start,
+    Pause
+}
+export default class PinguinRun extends Phaser.Scene implements Base{
+    public gameState =  gameState.Pause
     private icebackground!: Phaser.GameObjects.TileSprite
     private cursors!: Phaser.Types.Input.Keyboard.CursorKeys
     private tiles!: Phaser.Physics.Arcade.StaticGroup
     private infiniteTiles!: Phaser.GameObjects.TileSprite
     private Title!: Phaser.GameObjects.Image
     public pinguin!: Pinguin
+    private Ui!: Ui
+    private EndGame!: EndGame
     private coins!: Phaser.Physics.Arcade.StaticGroup
     private gems!: Phaser.Physics.Arcade.StaticGroup
     private icebergs!: Phaser.Physics.Arcade.StaticGroup
     public stars!: Phaser.Physics.Arcade.StaticGroup
     private emitter!: Phaser.GameObjects.Particles.ParticleEmitterManager
-    private lvlData !: LevelData
     private avaibleLevel = []
-    public lvlNumber = 0
-    public coinCount = 0
-    public gemCount = 0
-    public totalcoin = 0
-    public totalgem = 0
+    public lvlNumber!: number
+    public coinCount!: number
+    public gemCount!: number
+    public totalCoin!: number
+    public totalGem!: number
     constructor() {
         super('pinguinrun')
+
+        this.EndGame = new EndGame(this)
+        this.Ui = new Ui(this)        
+        this.lvlNumber = 1
+        this.coinCount = 0
+        this.gemCount = 0
+        this.totalCoin = 0
+        this.totalGem = 0
+
         fetch('assets/ice/Level/manifest.json')
             .then(res => res.json())
-            .then(data => this.avaibleLevel = data)
-
+            .then(data => this.avaibleLevel = data)    
+    }
+    setLvlNumber(number: number){
+        this.lvlNumber = number
+    }
+    setCoinCount(number: number) {
+         this.coinCount += number
+    }
+    setGemCount(number: number) {
+        this.gemCount += number
+    }
+    settotalCoin(number: number) {
+        this.totalCoin +=number
+    }
+    settotalGem(number: number) {
+        this.totalGem += number
+    }
+    public getLvlNumber()
+    {
+        return  this.lvlNumber
+    }
+    public getCoinCount()
+    {
+        return this.coinCount
+    }
+    public getGemCount()
+    {
+        return this.gemCount
+    }
+    public gettotalCoin()
+    {
+        return this.totalCoin
+    }
+    public gettotalGem()
+    {
+        return this.totalGem
+    }
+    public getStars()
+    {
+        return this.stars
+    }
+    public getScene()
+    {
+        return this
+    }
+    public setGameStatePause()
+    {
+        this.gameState = gameState.Pause
     }
     create() {
         const lvlFind = this.avaibleLevel[this.lvlNumber]
@@ -40,19 +101,20 @@ export default class PinguinRun extends PinguinRunBase {
                 .then(res => res.json())
                 .then((lvlData) => {
 
-                    if (this.lvlNumber === 0) {
+                    if (this.lvlNumber === 0) {                        
                         this.startMenu(lvlData)
                     }
                     else {
+                        this.gameState = gameState.Start
                         this.loadLevel(lvlData)
                         this.coinCount = 0
-                        Ui.prototype.reset()
+                        this.Ui.reset()
                     }
                     this.snowFall()
                 })
         }
-        else {
-            EndGame.prototype.endGame()
+        else {            
+            this.EndGame.endGame()
         }
 
 
@@ -61,12 +123,12 @@ export default class PinguinRun extends PinguinRunBase {
     }
     update() {
 
-        if (this.cursors.space.isDown && this.pinguin.active == false) {
+        if (this.cursors.space.isDown && gameState.Pause) {
             if (this.lvlNumber < this.avaibleLevel.length) {
-                EndGame.prototype.continue()
+                this.EndGame.continue()
             }
             else {
-                EndGame.prototype.returnToMenu()
+               this.EndGame.returnToMenu()
             }
         }
         switch (this.lvlNumber) {
@@ -78,13 +140,12 @@ export default class PinguinRun extends PinguinRunBase {
                     this.infiniteTiles.tilePositionX += 1
                 }
                 else {
-                    console.log('erreur')
+                    console.log(this.lvlNumber)
                 }
                 break
         }
     }
     protected startMenu(lvlData: LevelData) {
-        this.lvlData = lvlData;
 
         const width = this.scale.width
         const height = this.scale.height
@@ -106,7 +167,7 @@ export default class PinguinRun extends PinguinRunBase {
         const screenText = this.add.text(72, 512, 'Appuyez sur espace pour commencer', { fontSize: '42px', fontFamily: 'Arial Black', color: '0x000000' }).setOrigin(0).setScrollFactor(0);
         TweenHelper.flashElement(this, screenText)
 
-        this.createPlayer(this.lvlData.playerStart)
+        this.createPlayer(lvlData.playerStart)
 
         this.physics.world.setBounds(
             0, 0,
@@ -114,9 +175,7 @@ export default class PinguinRun extends PinguinRunBase {
             false, false, true, true
         )
 
-        this.physics.world.gravity.setTo(0)
-
-        this.pinguin.setActive(false)
+        this.physics.world.gravity.setTo(0)        
 
         this.cameras.main.setBounds(0, 0, Number.MAX_SAFE_INTEGER, this.scale.height)
 
@@ -125,20 +184,19 @@ export default class PinguinRun extends PinguinRunBase {
         this.pinguin.startAutorun()
 
     }
-    public loadLevel(lvlData: LevelData) {
-        this.lvlData = lvlData;
+    public loadLevel(lvlData: LevelData) {        
 
-        this.createObstacles(this.lvlData.obstacles);
+        this.createObstacles(lvlData.obstacles);
 
-        this.createCollectibles(this.lvlData.collectibles);
+        this.createCollectibles(lvlData.collectibles);
 
-        this.createWorld(this.lvlData.world);
+        this.createWorld(lvlData.world);
 
-        this.createPlayer(this.lvlData.playerStart);
+        this.createPlayer(lvlData.playerStart);
 
         this.createStatics();
 
-        Ui.prototype.createUI()
+        this.Ui.createUI()
 
 
     }
@@ -155,7 +213,7 @@ export default class PinguinRun extends PinguinRunBase {
 
             this.gemCount += 1
 
-            this.totalgem += 1
+            this.totalGem += 1
 
             switch (obj.getData('color')) {
                 case 'blue':
@@ -168,9 +226,6 @@ export default class PinguinRun extends PinguinRunBase {
                     obj.setTexture(TextureKeys.UI, 'redGemBlockE.png')
                     break
             }
-
-            Ui.prototype.update()
-
         }
         else if (this.coins.contains(obj2)) {
             const obj = obj2 as Phaser.Physics.Arcade.Sprite
@@ -181,12 +236,12 @@ export default class PinguinRun extends PinguinRunBase {
 
             this.coinCount += 1
 
-            this.totalcoin += 1
+            this.totalCoin += 1
 
 
         }
 
-        Ui.prototype.update()
+            this.Ui.update()
 
     }
 
@@ -234,7 +289,7 @@ export default class PinguinRun extends PinguinRunBase {
         this.physics.add.overlap(
             this.stars,
             this.pinguin,
-            EndGame.prototype.win,
+            this.EndGame.win.bind(this.gameState = gameState.Pause),
             undefined,
             this
         )

@@ -1,33 +1,51 @@
-interface ObjectBaseData {
+import Pinguin from "~/game/Pingouin";
+import PinguinRun from "~/game/PinguinRun";
+
+export interface Base {
+    getLvlNumber(): number
+    getCoinCount(): number
+    getGemCount(): number
+    gettotalCoin(): number
+    gettotalGem(): number
+    getStars(): Phaser.Physics.Arcade.StaticGroup
+    getScene(): Phaser.Scene
+    setLvlNumber(number)
+    setCoinCount(number)
+    setGemCount(number)
+    settotalCoin(number)
+    settotalGem(number)
+    setGameStatePause()      
+}
+export interface ObjectBaseData {
     x: number;
     y: number;
 }
 
-interface KeyedObjectData extends ObjectBaseData {
+export interface KeyedObjectData extends ObjectBaseData {
     key: string;
 }
 
-interface TileData extends KeyedObjectData { }
+export interface TileData extends KeyedObjectData { }
 
-interface ObstacleData extends KeyedObjectData { }
+export interface ObstacleData extends KeyedObjectData { }
 
-interface CollectibleData extends ObjectBaseData {
+export interface CollectibleData extends ObjectBaseData {
     type: string;
 }
 
-interface GemData extends CollectibleData {
+export interface GemData extends CollectibleData {
     color: string;
 }
 
-interface CoinData extends CollectibleData { }
+export interface CoinData extends CollectibleData { }
 
-type Collectible = GemData | CoinData;
-type WorldData = Array<TileData>;
-type ObstaclesData = Array<ObstacleData>;
-type CollectiblesData = Array<Collectible>;
-type PlayerStartData = ObjectBaseData;
+export type Collectible = GemData | CoinData;
+export type WorldData = Array<TileData>;
+export type ObstaclesData = Array<ObstacleData>;
+export type CollectiblesData = Array<Collectible>;
+export type PlayerStartData = ObjectBaseData;
 
-interface LevelData {
+export interface LevelData {
     collectibles: CollectiblesData;
     playerStart: PlayerStartData;
     obstacles: ObstaclesData;
