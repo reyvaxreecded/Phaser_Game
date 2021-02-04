@@ -1,35 +1,24 @@
 import TextureKeys from '~/consts/TextureKeys'
-import Phaser from 'phaser'
 import { Base } from '~/consts/Interfaces'
 
 
-export default class EndGame{
-private game!: Base
-constructor(game: Base){
-    this.game = game
-}
-    returnToMenu(){
+export default class EndGame {
+    private game!: Base
+    constructor(game: Base) {
+        this.game = game
+    }
+    public returnToMenu() {
         this.game.setLvlNumber(0)
         const scene = this.game.getScene()
         scene.scene.start('pinguinrun')
     }
-    continue() {
+    public continue() {
         const lvlNumber = this.game.getLvlNumber()
-        this.game.setLvlNumber(lvlNumber+1)
+        this.game.setLvlNumber(lvlNumber + 1)
         const scene = this.game.getScene()
         scene.scene.start('pinguinrun')
     }
-    win(obj1: Phaser.GameObjects.GameObject,
-        obj2: Phaser.GameObjects.GameObject) {
-
-        const obj = obj2 as Phaser.Physics.Arcade.Sprite
-        const stars = this.game.getStars()
-        stars.killAndHide(obj)
-        obj.body.enable = false
-        this.game.setGameStatePause()
-        this.showScore()
-    }
-    endGame() {
+    public endGame() {
         let lvlNumber = this.game.getLvlNumber()
         const scene = this.game.getScene()
         const totalcoin = this.game.gettotalCoin()
@@ -53,7 +42,7 @@ constructor(game: Base){
         scene.add.container(512, 384, [rectangle, end, coinCount, gemCount, next]).setScrollFactor(0)
         this.game.setGameStatePause()
     }
-    private showScore() {
+    public showScore() {
         const scene = this.game.getScene()
         const lvlNumber = this.game.getLvlNumber()
         const coinCounter = this.game.getCoinCount()

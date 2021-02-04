@@ -36,7 +36,7 @@ export default class PinguinRun extends Phaser.Scene implements Base{
 
         this.EndGame = new EndGame(this)
         this.Ui = new Ui(this)        
-        this.lvlNumber = 1
+        this.lvlNumber = 0
         this.coinCount = 0
         this.gemCount = 0
         this.totalCoin = 0
@@ -46,19 +46,23 @@ export default class PinguinRun extends Phaser.Scene implements Base{
             .then(res => res.json())
             .then(data => this.avaibleLevel = data)    
     }
-    setLvlNumber(number: number){
+    public killStar(obj: Phaser.Physics.Arcade.Sprite)
+    {
+        this.stars.killAndHide(obj)
+    }
+    public setLvlNumber(number: number){
         this.lvlNumber = number
     }
-    setCoinCount(number: number) {
+    public setCoinCount(number: number) {
          this.coinCount += number
     }
-    setGemCount(number: number) {
+    public setGemCount(number: number) {
         this.gemCount += number
     }
-    settotalCoin(number: number) {
+    public settotalCoin(number: number) {
         this.totalCoin +=number
     }
-    settotalGem(number: number) {
+    public settotalGem(number: number) {
         this.totalGem += number
     }
     public getLvlNumber()
@@ -104,8 +108,7 @@ export default class PinguinRun extends Phaser.Scene implements Base{
                     if (this.lvlNumber === 0) {                        
                         this.startMenu(lvlData)
                     }
-                    else {
-                        this.gameState = gameState.Start
+                    else {                        
                         this.loadLevel(lvlData)
                         this.coinCount = 0
                         this.Ui.reset()
@@ -123,7 +126,7 @@ export default class PinguinRun extends Phaser.Scene implements Base{
     }
     update() {
 
-        if (this.cursors.space.isDown && gameState.Pause) {
+        if (this.cursors.space.isDown && this.gameState === gameState.Pause) {
             if (this.lvlNumber < this.avaibleLevel.length) {
                 this.EndGame.continue()
             }
@@ -184,7 +187,11 @@ export default class PinguinRun extends Phaser.Scene implements Base{
         this.pinguin.startAutorun()
 
     }
-    public loadLevel(lvlData: LevelData) {        
+    public loadLevel(lvlData: LevelData) {
+
+        this.gameState = gameState.Start        
+
+        this.createBackground()        
 
         this.createObstacles(lvlData.obstacles);
 
@@ -192,13 +199,21 @@ export default class PinguinRun extends Phaser.Scene implements Base{
 
         this.createWorld(lvlData.world);
 
-        this.createPlayer(lvlData.playerStart);
-
-        this.createStatics();
+        this.createPlayer(lvlData.playerStart);       
 
         this.Ui.createUI()
+        this.createStatics();
 
 
+    }
+    private createBackground()
+    {
+        const width = this.scale.width
+        const height = this.scale.height
+
+        this.icebackground = this.add.tileSprite(0, 0, width, height, TextureKeys.Icebackground)
+            .setOrigin(0)
+            .setScrollFactor(0);
     }
     private handleCollectItem(
         obj1: Phaser.GameObjects.GameObject,
@@ -240,6 +255,19 @@ export default class PinguinRun extends Phaser.Scene implements Base{
 
 
         }
+        else if(this.stars.contains(obj2)){
+            const obj = obj2 as Phaser.Physics.Arcade.Sprite
+
+            this.stars.killAndHide(obj)
+
+            obj.body.enable= false
+
+            this.gameState = gameState.Pause
+
+            this.pinguin.setActive(false)
+
+            this.EndGame.showScore()
+        }
 
             this.Ui.update()
 
@@ -252,12 +280,6 @@ export default class PinguinRun extends Phaser.Scene implements Base{
 
     protected createStatics() {
 
-        const width = this.scale.width
-        const height = this.scale.height
-
-        this.icebackground = this.add.tileSprite(0, 0, width, height, TextureKeys.Icebackground)
-            .setOrigin(0)
-            .setScrollFactor(0);
 
         this.physics.world.setBounds(
             0, 0,
@@ -289,7 +311,7 @@ export default class PinguinRun extends Phaser.Scene implements Base{
         this.physics.add.overlap(
             this.stars,
             this.pinguin,
-            this.EndGame.win.bind(this.gameState = gameState.Pause),
+            this.handleCollectItem,
             undefined,
             this
         )

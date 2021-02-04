@@ -1,7 +1,6 @@
 import Phaser from 'phaser'
 import AnimationKeys from '~/consts/AnimationKeys'
 import TextureKeys from '~/consts/TextureKeys'
-import PinguinRun from './PinguinRun'
 
 enum PinguinState 
 {
