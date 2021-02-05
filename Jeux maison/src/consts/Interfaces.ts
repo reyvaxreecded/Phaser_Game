@@ -7,14 +7,13 @@ export interface Base {
     getGemCount(): number
     gettotalCoin(): number
     gettotalGem(): number
-    getStars(): Phaser.Physics.Arcade.StaticGroup
     getScene(): Phaser.Scene
     setLvlNumber(number: number)
     setCoinCount(number: number)
     setGemCount(number: number)
-    settotalCoin(number: number)
-    settotalGem(number: number)
-    setGameStatePause()  
+    setBlueGem(value)
+    setGreenGem(value)
+    setRedGem(value)
     }
 export interface ObjectBaseData {
     x: number;

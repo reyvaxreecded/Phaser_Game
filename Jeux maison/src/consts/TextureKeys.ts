@@ -9,7 +9,8 @@ enum TextureKeys
     Decorations = 'decorations',
     Icerberg = 'iceberg',
     Snowfalkes = 'snowflakes',
-    UI = 'ui'
+    UI = 'ui',
+    Button = 'button'
 }
 
 export default TextureKeys

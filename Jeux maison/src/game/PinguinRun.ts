@@ -2,18 +2,18 @@ import Phaser from 'phaser'
 import TextureKeys from '~/consts/TextureKeys'
 import Pinguin from '~/game/Pingouin'
 import EndGame from './Endgame';
-import TweenHelper from './TweenHelper';
 import Ui from './Ui';
-import {LevelData, ObjectBaseData, CoinData, GemData, CollectibleData, KeyedObjectData, TileData, ObstacleData, Collectible, WorldData, PlayerStartData, CollectiblesData, ObstaclesData, Base} from '~/consts/Interfaces'
-enum gameState
-{
+import { LevelData, ObjectBaseData, CoinData, GemData, CollectibleData, KeyedObjectData, TileData, ObstacleData, Collectible, WorldData, PlayerStartData, CollectiblesData, ObstaclesData, Base } from '~/consts/Interfaces'
+import { Events } from 'matter';
+enum gameState {
     Start,
     Pause
 }
-export default class PinguinRun extends Phaser.Scene implements Base{
-    public gameState =  gameState.Pause
+export default class PinguinRun extends Phaser.Scene implements Base {
+    public gameState = gameState.Pause
     private icebackground!: Phaser.GameObjects.TileSprite
     private cursors!: Phaser.Types.Input.Keyboard.CursorKeys
+    private pointer!: Phaser.Input.Pointer
     private tiles!: Phaser.Physics.Arcade.StaticGroup
     private infiniteTiles!: Phaser.GameObjects.TileSprite
     private Title!: Phaser.GameObjects.Image
@@ -31,11 +31,16 @@ export default class PinguinRun extends Phaser.Scene implements Base{
     public gemCount!: number
     public totalCoin!: number
     public totalGem!: number
+    public blueGem!: Phaser.GameObjects.Sprite
+    public greenGem!: Phaser.GameObjects.Sprite
+    public redGem!: Phaser.GameObjects.Sprite
+    private startBtn!: Phaser.GameObjects.Sprite
+    private editorBtn!: Phaser.GameObjects.Sprite
     constructor() {
         super('pinguinrun')
 
         this.EndGame = new EndGame(this)
-        this.Ui = new Ui(this)        
+        this.Ui = new Ui(this)
         this.lvlNumber = 0
         this.coinCount = 0
         this.gemCount = 0
@@ -44,58 +49,43 @@ export default class PinguinRun extends Phaser.Scene implements Base{
 
         fetch('assets/ice/Level/manifest.json')
             .then(res => res.json())
-            .then(data => this.avaibleLevel = data)    
+            .then(data => this.avaibleLevel = data)
     }
-    public killStar(obj: Phaser.Physics.Arcade.Sprite)
-    {
-        this.stars.killAndHide(obj)
+    public setBlueGem(value) {
+        this.blueGem = value
     }
-    public setLvlNumber(number: number){
+    public setGreenGem(value) {
+        this.greenGem = value
+    }
+    public setRedGem(value) {
+        this.redGem = value
+    }
+    public setLvlNumber(number: number) {
         this.lvlNumber = number
     }
     public setCoinCount(number: number) {
-         this.coinCount += number
+        this.coinCount += number
     }
     public setGemCount(number: number) {
         this.gemCount += number
     }
-    public settotalCoin(number: number) {
-        this.totalCoin +=number
+    public getLvlNumber() {
+        return this.lvlNumber
     }
-    public settotalGem(number: number) {
-        this.totalGem += number
-    }
-    public getLvlNumber()
-    {
-        return  this.lvlNumber
-    }
-    public getCoinCount()
-    {
+    public getCoinCount() {
         return this.coinCount
     }
-    public getGemCount()
-    {
+    public getGemCount() {
         return this.gemCount
     }
-    public gettotalCoin()
-    {
+    public gettotalCoin() {
         return this.totalCoin
     }
-    public gettotalGem()
-    {
+    public gettotalGem() {
         return this.totalGem
     }
-    public getStars()
-    {
-        return this.stars
-    }
-    public getScene()
-    {
+    public getScene() {
         return this
-    }
-    public setGameStatePause()
-    {
-        this.gameState = gameState.Pause
     }
     create() {
         const lvlFind = this.avaibleLevel[this.lvlNumber]
@@ -105,10 +95,10 @@ export default class PinguinRun extends Phaser.Scene implements Base{
                 .then(res => res.json())
                 .then((lvlData) => {
 
-                    if (this.lvlNumber === 0) {                        
+                    if (this.lvlNumber === 0) {
                         this.startMenu(lvlData)
                     }
-                    else {                        
+                    else {
                         this.loadLevel(lvlData)
                         this.coinCount = 0
                         this.Ui.reset()
@@ -116,13 +106,15 @@ export default class PinguinRun extends Phaser.Scene implements Base{
                     this.snowFall()
                 })
         }
-        else {            
+        else {
             this.EndGame.endGame()
         }
 
 
 
-        this.cursors = this.input.keyboard.createCursorKeys()
+        this.cursors = this.input.keyboard.createCursorKeys()    
+        this.pointer = this.input.activePointer
+               
     }
     update() {
 
@@ -131,7 +123,7 @@ export default class PinguinRun extends Phaser.Scene implements Base{
                 this.EndGame.continue()
             }
             else {
-               this.EndGame.returnToMenu()
+                this.EndGame.returnToMenu()
             }
         }
         switch (this.lvlNumber) {
@@ -141,7 +133,19 @@ export default class PinguinRun extends Phaser.Scene implements Base{
                 if (this.infiniteTiles != undefined) {
                     this.icebackground.tilePositionX += 1
                     this.infiniteTiles.tilePositionX += 1
-                }
+                    this.startBtn.on('pointerdown', ()=>{
+                        this.startBtn.setScale(0.5)
+                    }).on('pointerup', (pointer,x,y,event)=>{
+                        this.startBtn.setScale(0.6)
+                        console.log('btn click')
+                        event.stopPropagation()                            
+                    })
+                    this.editorBtn.on('pointerdown', ()=>{
+                        this.editorBtn.setScale(0.5)
+                    }).on('pointerup', ()=>{
+                        this.editorBtn.setScale(0.6)
+                    })
+                }              
                 else {
                     console.log(this.lvlNumber)
                 }
@@ -162,13 +166,13 @@ export default class PinguinRun extends Phaser.Scene implements Base{
             .setOrigin(0)
             .setScrollFactor(0)
 
-        this.Title = this.add.image(10, 32, TextureKeys.Title)
+        this.Title = this.add.image(10, -20, TextureKeys.Title)
             .setOrigin(0)
             .setScrollFactor(0)
 
-        this.add.existing(this.Title)
-        const screenText = this.add.text(72, 512, 'Appuyez sur espace pour commencer', { fontSize: '42px', fontFamily: 'Arial Black', color: '0x000000' }).setOrigin(0).setScrollFactor(0);
-        TweenHelper.flashElement(this, screenText)
+        this.startBtn = this.add.sprite(512, 500, TextureKeys.Button, 'playBtn.png').setScale(0.6).setInteractive()
+
+        this.editorBtn = this.add.sprite(512, 582, TextureKeys.Button, 'editorBtn.png').setScale(0.6).setInteractive()
 
         this.createPlayer(lvlData.playerStart)
 
@@ -189,9 +193,9 @@ export default class PinguinRun extends Phaser.Scene implements Base{
     }
     public loadLevel(lvlData: LevelData) {
 
-        this.gameState = gameState.Start        
+        this.gameState = gameState.Start
 
-        this.createBackground()        
+        this.createBackground()
 
         this.createObstacles(lvlData.obstacles);
 
@@ -199,15 +203,14 @@ export default class PinguinRun extends Phaser.Scene implements Base{
 
         this.createWorld(lvlData.world);
 
-        this.createPlayer(lvlData.playerStart);       
+        this.createPlayer(lvlData.playerStart);
 
         this.Ui.createUI()
         this.createStatics();
 
 
     }
-    private createBackground()
-    {
+    private createBackground() {
         const width = this.scale.width
         const height = this.scale.height
 
@@ -230,17 +233,18 @@ export default class PinguinRun extends Phaser.Scene implements Base{
 
             this.totalGem += 1
 
-            switch (obj.getData('color')) {
+            switch (obj2.getData('color')) {
                 case 'blue':
-                    obj.setTexture(TextureKeys.UI, 'blueGemBlockE.png')
+                    this.blueGem.setTexture(TextureKeys.UI, 'blueGemBlockE.png')
                     break
                 case 'green':
-                    obj.setTexture(TextureKeys.UI, 'greenGemBlockE.png')
+                    this.greenGem.setTexture(TextureKeys.UI, 'greenGemBlockE.png')
                     break
                 case 'red':
-                    obj.setTexture(TextureKeys.UI, 'redGemBlockE.png')
+                    this.redGem.setTexture(TextureKeys.UI, 'redGemBlockE.png')
                     break
             }
+            this.Ui.update()
         }
         else if (this.coins.contains(obj2)) {
             const obj = obj2 as Phaser.Physics.Arcade.Sprite
@@ -253,14 +257,14 @@ export default class PinguinRun extends Phaser.Scene implements Base{
 
             this.totalCoin += 1
 
-
+            this.Ui.update()
         }
-        else if(this.stars.contains(obj2)){
+        else if (this.stars.contains(obj2)) {
             const obj = obj2 as Phaser.Physics.Arcade.Sprite
 
             this.stars.killAndHide(obj)
 
-            obj.body.enable= false
+            obj.body.enable = false
 
             this.gameState = gameState.Pause
 
@@ -268,8 +272,6 @@ export default class PinguinRun extends Phaser.Scene implements Base{
 
             this.EndGame.showScore()
         }
-
-            this.Ui.update()
 
     }
 

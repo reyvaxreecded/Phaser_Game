@@ -40,7 +40,6 @@ export default class EndGame {
         const next = scene.add.text(0, 120, `Merci d'avoir joué!`, style3)
             .setOrigin(0.5)
         scene.add.container(512, 384, [rectangle, end, coinCount, gemCount, next]).setScrollFactor(0)
-        this.game.setGameStatePause()
     }
     public showScore() {
         const scene = this.game.getScene()

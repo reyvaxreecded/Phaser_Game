@@ -1,0 +1,44 @@
+{"frames": {
+
+"editorBtn.png":
+{
+	"frame": {"x":0,"y":0,"w":384,"h":112},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":384,"h":112},
+	"sourceSize": {"w":384,"h":112}
+},
+"editorBtnActive.png":
+{
+	"frame": {"x":0,"y":112,"w":318,"h":93},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":318,"h":93},
+	"sourceSize": {"w":318,"h":93}
+},
+"playBtn.png":
+{
+	"frame": {"x":0,"y":205,"w":384,"h":112},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":384,"h":112},
+	"sourceSize": {"w":384,"h":112}
+},
+"playBtnActive.png":
+{
+	"frame": {"x":0,"y":317,"w":315,"h":91},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":315,"h":91},
+	"sourceSize": {"w":315,"h":91}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Button.png",
+	"format": "RGBA8888",
+	"size": {"w":384,"h":408},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:874254e789a5ad2d33d7f2cfd4c6ee43:c7ee1e1c91e8b87d8252082f812fadce:641d884822b583c42e87e4fc2164c2f6$"
+}
+}
