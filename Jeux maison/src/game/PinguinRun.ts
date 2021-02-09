@@ -112,11 +112,11 @@ export default class PinguinRun extends Phaser.Scene implements Base {
 
 
 
-        this.cursors = this.input.keyboard.createCursorKeys()    
+        this.cursors = this.input.keyboard.createCursorKeys()
         this.pointer = this.input.activePointer
-               
+
     }
-    update() {
+    update(d, dt) {
 
         if (this.cursors.space.isDown && this.gameState === gameState.Pause) {
             if (this.lvlNumber < this.avaibleLevel.length) {
@@ -133,19 +133,8 @@ export default class PinguinRun extends Phaser.Scene implements Base {
                 if (this.infiniteTiles != undefined) {
                     this.icebackground.tilePositionX += 1
                     this.infiniteTiles.tilePositionX += 1
-                    this.startBtn.on('pointerdown', ()=>{
-                        this.startBtn.setScale(0.5)
-                    }).on('pointerup', (pointer,x,y,event)=>{
-                        this.startBtn.setScale(0.6)
-                        console.log('btn click')
-                        event.stopPropagation()                            
-                    })
-                    this.editorBtn.on('pointerdown', ()=>{
-                        this.editorBtn.setScale(0.5)
-                    }).on('pointerup', ()=>{
-                        this.editorBtn.setScale(0.6)
-                    })
-                }              
+
+                }
                 else {
                     console.log(this.lvlNumber)
                 }
@@ -171,8 +160,23 @@ export default class PinguinRun extends Phaser.Scene implements Base {
             .setScrollFactor(0)
 
         this.startBtn = this.add.sprite(512, 500, TextureKeys.Button, 'playBtn.png').setScale(0.6).setInteractive()
+        this.startBtn.on('pointerdown', () => {
+            this.startBtn.setScale(0.5)
+        }).on('pointerup', (e) => {
+            this.startBtn.setScale(0.6)
+            console.log('btn click')
+            this.EndGame.continue()
+            e.event.stopPropagation()
+        })
 
         this.editorBtn = this.add.sprite(512, 582, TextureKeys.Button, 'editorBtn.png').setScale(0.6).setInteractive()
+        this.editorBtn.on('pointerdown', () => {
+            this.editorBtn.setScale(0.5)
+        }).on('pointerup', (e) => {
+            this.editorBtn.setScale(0.6)
+            this.scene.start('editor')
+            e.event.stopPropagation()
+        })
 
         this.createPlayer(lvlData.playerStart)
 
@@ -182,7 +186,7 @@ export default class PinguinRun extends Phaser.Scene implements Base {
             false, false, true, true
         )
 
-        this.physics.world.gravity.setTo(0)        
+        this.physics.world.gravity.setTo(0)
 
         this.cameras.main.setBounds(0, 0, Number.MAX_SAFE_INTEGER, this.scale.height)
 
