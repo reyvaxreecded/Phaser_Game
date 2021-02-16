@@ -49,7 +49,7 @@ export default class PinguinRun extends Phaser.Scene implements Base {
 
         fetch('assets/ice/Level/manifest.json')
             .then(res => res.json())
-            .then(data => this.avaibleLevel = data)
+            .then(data => this.avaibleLevel = data)            
     }
     public setBlueGem(value) {
         this.blueGem = value
@@ -211,6 +211,7 @@ export default class PinguinRun extends Phaser.Scene implements Base {
 
         this.Ui.createUI()
         this.createStatics();
+        console.log(this.avaibleLevel)
 
 
     }
@@ -359,13 +360,13 @@ export default class PinguinRun extends Phaser.Scene implements Base {
     protected createObstacles(obstaclesData: ObstaclesData) {
         this.icebergs = this.physics.add.staticGroup();
         for (let iceberg of obstaclesData) {
-            this.icebergs.create(iceberg.x, iceberg.y, TextureKeys.Icerberg)
+            this.icebergs.create(iceberg.x, iceberg.y, TextureKeys.Icerberg, "iceberg.png")
                 .setOrigin(0.5)
         }
     }
 
     protected createCoin(coinData: CoinData) {
-        this.coins.create(coinData.x, coinData.y, TextureKeys.Colectible, 'object_06_coin.png')
+        this.coins.create(coinData.x, coinData.y, TextureKeys.Colectible, 'coin.png')
             .setOrigin(0.5)
     }
 
@@ -383,7 +384,7 @@ export default class PinguinRun extends Phaser.Scene implements Base {
     }
 
     protected createStar(data) {
-        this.stars.create(data.x, data.y, TextureKeys.Colectible, 'object_04_star.png')
+        this.stars.create(data.x, data.y, TextureKeys.Colectible, 'star.png')
     }
 
     protected getCollectibleOfType(collectiblesData, typeName) {
@@ -407,6 +408,5 @@ export default class PinguinRun extends Phaser.Scene implements Base {
             blendMode: 'ADD'
         }).setScrollFactor(0)
     }
-
 
 }

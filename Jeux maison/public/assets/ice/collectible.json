@@ -24,7 +24,7 @@
 		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
 		"sourceSize": {"w":40,"h":40}
 	},
-	"object_04_star.png":
+	"star.png":
 	{
 		"frame": {"x":120,"y":0,"w":40,"h":40},
 		"rotated": false,
@@ -32,7 +32,7 @@
 		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
 		"sourceSize": {"w":40,"h":40}
 	},
-	"object_06_coin.png":
+	"coin.png":
 	{
 		"frame": {"x":160,"y":0,"w":40,"h":40},
 		"rotated": false,

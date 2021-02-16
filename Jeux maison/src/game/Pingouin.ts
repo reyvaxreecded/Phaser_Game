@@ -1,6 +1,8 @@
-import Phaser from 'phaser'
+import Phaser, { Game } from 'phaser'
 import AnimationKeys from '~/consts/AnimationKeys'
+import { Base } from '~/consts/Interfaces'
 import TextureKeys from '~/consts/TextureKeys'
+import Ui from './Ui'
 
 enum PinguinState 
 {
@@ -15,10 +17,10 @@ export default class Pinguin extends Phaser.GameObjects.Container
     private PinguinState = PinguinState.Running
     private pinguin!: Phaser.GameObjects.Sprite
     private cursors!: Phaser.Types.Input.Keyboard.CursorKeys
+    private game!: Base
     constructor(scene: Phaser.Scene, x: number, y: number)
     {
-        super(scene, x, y)
-
+        super(scene, x, y)        
         this.pinguin = scene.add.sprite(1, 1, TextureKeys.Pingouin).setOrigin(0)
 
         this.createAnimation()        
@@ -151,8 +153,9 @@ export default class Pinguin extends Phaser.GameObjects.Container
                     break
                 }
             case PinguinState.Dead:
-                {                       
-                    setTimeout(()=>this.scene.scene.start('pinguinrun'),500)
+                {                                          
+                    this.game.setLvlNumber(0)
+                    this.scene.scene.start('pinguirun')
                 }
         }
     }
@@ -214,11 +217,29 @@ export default class Pinguin extends Phaser.GameObjects.Container
         if (this.PinguinState !== PinguinState.Running) {
             return
         }
+        else{
+            const nbHearth = Ui.prototype.getHearthNb()
+            if(nbHearth > 0)
+            {
+                Ui.prototype.setHearthNb(nbHearth-1)
+            }
+            else
+            {
+                const nbLife = Ui.prototype.getLifeNb()
+                switch(nbLife)
+                {
+                    case 0:
+                        this.PinguinState = PinguinState.Killed
+                        this.pinguin.play(AnimationKeys.PinguinDead)
+                        break;
+                    default:
+                        Ui.prototype.setLifeNb(nbLife - 1)
+                        setTimeout(()=> this.scene.scene.start('pinguinrun'),500)
+                        break;
+                }
 
-        this.PinguinState = PinguinState.Killed
-
-        this.pinguin.play(AnimationKeys.PinguinDead)
-      
+            }
+        } 
     }
     startAutorun()
     {
