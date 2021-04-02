@@ -307,7 +307,6 @@ export default class Editor extends Phaser.Scene {
                                 this.add.sprite(posX, posY, key, frame)
                                 this.matrix[coords[1]][coords[0]] = '1'
                                 this.nbRedGem += 1
-                                console.log(this.nbRedGem)
                             }
                             break;
                         case 'gem_blue.png':

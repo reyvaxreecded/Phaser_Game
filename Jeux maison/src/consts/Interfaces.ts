@@ -1,18 +1,15 @@
-import Pinguin from "~/game/Pingouin";
-import PinguinRun from "~/game/PinguinRun";
-
 export interface Base {
-    getLvlNumber(): number
-    getCoinCount(): number
-    getGemCount(): number
-    gettotalCoin(): number
-    gettotalGem(): number
-    getScene(): Phaser.Scene
-    setLvlNumber(number: number)
-    setCoinCount(number: number)
-    setGemCount(number: number)
-    setBlueGem(value)
-    setGreenGem(value)
+    getLvlNumber(): number,
+    getCoinCount(): number,
+    getGemCount(): number,
+    gettotalCoin(): number,
+    gettotalGem(): number,
+    getScene(): Phaser.Scene,
+    setLvlNumber(number: number),
+    setCoinCount(number: number),
+    setGemCount(number: number),
+    setBlueGem(value),
+    setGreenGem(value),
     setRedGem(value)
     }
 export interface ObjectBaseData {

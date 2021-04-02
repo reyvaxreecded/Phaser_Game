@@ -1,5 +1,4 @@
 import Phaser from 'phaser'
-import JsonKeys from '~/consts/JsonKeys'
 import SceneKeys from '~/consts/SceneKeys'
 import TextureKeys from '~/consts/TextureKeys'
 
