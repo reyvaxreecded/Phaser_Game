@@ -1,6 +1,6 @@
 import Phaser from 'phaser'
-import { Base } from '~/consts/Interfaces'
-import TextureKeys from '~/consts/TextureKeys'
+import { Base } from '../consts/Interfaces'
+import TextureKeys from '../consts/TextureKeys'
 import PinguinRun from './PinguinRun'
 
 
@@ -9,8 +9,8 @@ export default class Ui {
     private scoreLabel!: Phaser.GameObjects.Text
     private countLife!: Phaser.GameObjects.Text
     private hearthCount!: Phaser.GameObjects.Sprite
-    public lifeNb: number = 0
-    public hearthNb: number = 1
+    public lifeNb: number = 3
+    public hearthNb: number = 3
     private game!: Base;
     public setGame(game: Base){
         this.game = game

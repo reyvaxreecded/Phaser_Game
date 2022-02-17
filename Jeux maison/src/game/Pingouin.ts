@@ -1,7 +1,7 @@
 import Phaser, { Game } from 'phaser'
-import AnimationKeys from '~/consts/AnimationKeys'
-import { Base } from '~/consts/Interfaces'
-import TextureKeys from '~/consts/TextureKeys'
+import AnimationKeys from '../consts/AnimationKeys'
+import { Base } from '../consts/Interfaces'
+import TextureKeys from '../consts/TextureKeys'
 import PinguinRun from './PinguinRun'
 import Ui from './Ui'
 

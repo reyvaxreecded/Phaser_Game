@@ -1,7 +1,7 @@
 import Phaser from 'phaser'
-import TextureKeys from '~/consts/TextureKeys'
+import TextureKeys from '../consts/TextureKeys'
 // import { LevelData, ObjectBaseData, CoinData, GemData, CollectibleData, KeyedObjectData, TileData, ObstacleData, Collectible, WorldData, PlayerStartData, CollectiblesData, ObstaclesData, Base } from '~/consts/Interfaces'
-import * as GameInterfaces from '~/consts/Interfaces';
+import * as GameInterfaces from '../consts/Interfaces';
 
 export default class Editor extends Phaser.Scene {
     private selectedElement

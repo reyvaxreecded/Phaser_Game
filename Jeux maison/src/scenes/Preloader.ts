@@ -1,6 +1,6 @@
 import Phaser from 'phaser'
-import SceneKeys from '~/consts/SceneKeys'
-import TextureKeys from '~/consts/TextureKeys'
+import SceneKeys from '../consts/SceneKeys'
+import TextureKeys from '../consts/TextureKeys'
 
 export default class Preloader extends Phaser.Scene {
     constructor()

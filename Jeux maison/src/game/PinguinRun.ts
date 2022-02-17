@@ -1,6 +1,6 @@
 import Phaser from 'phaser'
-import TextureKeys from '~/consts/TextureKeys'
-import Pinguin from '~/game/Pingouin'
+import TextureKeys from '../consts/TextureKeys'
+import Pinguin from '../game/Pingouin'
 import EndGame from './Endgame';
 import Ui from './Ui';
 import { LevelData, ObjectBaseData, CoinData, GemData, CollectibleData, KeyedObjectData, TileData, ObstacleData, Collectible, WorldData, PlayerStartData, CollectiblesData, ObstaclesData, Base } from '~/consts/Interfaces';

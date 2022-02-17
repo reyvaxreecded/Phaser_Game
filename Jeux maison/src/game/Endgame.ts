@@ -1,5 +1,5 @@
-import TextureKeys from '~/consts/TextureKeys'
-import { Base } from '~/consts/Interfaces'
+import TextureKeys from '../consts/TextureKeys'
+import { Base } from '../consts/Interfaces'
 
 
 export default class EndGame {
